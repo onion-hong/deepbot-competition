@@ -1,0 +1,146 @@
+[
+  {
+    "source": "original_programs_20261006/auto_driver/auto_run.py",
+    "copy": "competition/reference/original/auto_driver/auto_run.py",
+    "bytes": 6130,
+    "sha256": "31762e33659b33b77907e0b9cc53e0e65ea93c6d5e332e6ab6bb639f43b93552"
+  },
+  {
+    "source": "original_programs_20261006/auto_driver/driver_way.py",
+    "copy": "competition/reference/original/auto_driver/driver_way.py",
+    "bytes": 14321,
+    "sha256": "1d15c82bc9f54f95143f508cb55a29e9ff958cebe6bb594f0f12904ef33a1219"
+  },
+  {
+    "source": "original_programs_20261006/auto_driver/params.cfg",
+    "copy": "competition/reference/original/auto_driver/params.cfg",
+    "bytes": 883,
+    "sha256": "f177c3bd5b05c9d383d65f185e8cccfd2509f8cecf7444f46f97139efa75df2a"
+  },
+  {
+    "source": "original_programs_20261006/auto_driver/race.launch",
+    "copy": "competition/reference/original/auto_driver/race.launch",
+    "bytes": 2356,
+    "sha256": "a5ac933be7820f441afec9b049e6a3d3a287f55f2ab71e0af0738bdb7ca03a96"
+  },
+  {
+    "source": "original_programs_20261006/racecar/data_collect.py",
+    "copy": "competition/reference/original/racecar/data_collect.py",
+    "bytes": 2659,
+    "sha256": "f1dd846eda4f7d43e3221cbecf0660621adb1302b91abd31b863868d3b29c4c5"
+  },
+  {
+    "source": "original_programs_20261006/racecar/data_collect.launch",
+    "copy": "competition/reference/original/racecar/data_collect.launch",
+    "bytes": 872,
+    "sha256": "f2fa7aaf20946a3e97cf465643f6fdbe79e75c622a062ab7dc1086c3829b9dc2"
+  },
+  {
+    "source": "original_programs_20261006/racecar/train.py",
+    "copy": "competition/reference/original/racecar/train.py",
+    "bytes": 2856,
+    "sha256": "63eea1eb22e6bd84e7a9f879c5d00508c669fabcfa83e655bb4b5737f4f25c90"
+  },
+  {
+    "source": "original_programs_20261006/racecar/driver.py",
+    "copy": "competition/reference/original/racecar/driver.py",
+    "bytes": 6675,
+    "sha256": "57ae39e52d680f182f4149cc9415a4c4798cca3666948bf238a071391ac0bcb2"
+  },
+  {
+    "source": "original_programs_20261006/racecar/driver.launch",
+    "copy": "competition/reference/original/racecar/driver.launch",
+    "bytes": 1051,
+    "sha256": "708d50fdf672d99990ba38e1319e1d69b9f52fe6d49490c0ad742c039791b5be"
+  },
+  {
+    "source": "original_programs_20261006/openvino/openvino_detect.py",
+    "copy": "competition/reference/original/openvino/openvino_detect.py",
+    "bytes": 8204,
+    "sha256": "b3c7668b3e97834e5a4bc0d13c2efb30d1a8c34501ee04182e4858b3197369da"
+  },
+  {
+    "source": "original_programs_20261006/openvino/detect.launch",
+    "copy": "competition/reference/original/openvino/detect.launch",
+    "bytes": 884,
+    "sha256": "eaa0792697f8b8081dd69e67566a706a9c9ff661bd21c958ac46bd7b7ae6b424"
+  },
+  {
+    "source": "original_programs_20261006/line_follower/line_detect.launch",
+    "copy": "competition/reference/original/line_follower/line_detect.launch",
+    "bytes": 1114,
+    "sha256": "d76fef9aef8ffba61c7da53f06f1c89fbce7d734ac8b44e08c7ac4a5821e23a6"
+  },
+  {
+    "source": "robot_patch_20261004/deepbot_driver.cpp",
+    "copy": "competition/reference/patched/deepbot_driver.cpp",
+    "bytes": 12066,
+    "sha256": "c0340ffb774cfbec8c26c5ae654a442da06b76fa0ed7a2c8cffad21f3a11bf77"
+  },
+  {
+    "source": "robot_patch_20261004/deepbot_driver.h",
+    "copy": "competition/reference/patched/deepbot_driver.h",
+    "bytes": 4072,
+    "sha256": "264ef13be170fe8bb6dc54408417c5671001fac0945442485982c270689fc4e3"
+  },
+  {
+    "source": "robot_patch_20261004/line.cpp",
+    "copy": "competition/reference/patched/line.cpp",
+    "bytes": 4598,
+    "sha256": "3afa26de916fd61dd45583b3968efece34c8cb9c46dcf7449bce7177c9d29291"
+  },
+  {
+    "source": "robot_patch_20261004/line_detect.cpp",
+    "copy": "competition/reference/patched/line_detect.cpp",
+    "bytes": 3082,
+    "sha256": "7099033db155cbe8d48d1e4ceb79eccce1ad2b28f5510b62e68a6bbad7289167"
+  },
+  {
+    "source": "robot_patch_20261004/line_detect.hpp",
+    "copy": "competition/reference/patched/line_detect.hpp",
+    "bytes": 2713,
+    "sha256": "92059b730f23c71dd0eb0408a4e0662dbcc33a9ff66185bfca92eb7195382f49"
+  },
+  {
+    "source": "robot_patch_20261004/factory_auto_run.py",
+    "copy": "competition/reference/patched/factory_auto_run.py",
+    "bytes": 8350,
+    "sha256": "82a4d68d7b004298bc95c4103558ae8371426310aa690913721889e040a6b35c"
+  },
+  {
+    "source": "robot_patch_20261004/factory_auto_run.diff",
+    "copy": "competition/reference/patched/factory_auto_run.diff",
+    "bytes": 9683,
+    "sha256": "04c777567fb3dda7c2c2fa31055f47c139574844af9d635081624e8c79acfe3c"
+  },
+  {
+    "source": "robot_patch_20261004/record_demonstration.py",
+    "copy": "competition/reference/patched/record_demonstration.py",
+    "bytes": 9527,
+    "sha256": "14fcd299086922e1ed6a422710008be99aa159761d1237e18eb75ad5e4188212"
+  },
+  {
+    "source": "robot_patch_20261004/export_demonstration.py",
+    "copy": "competition/reference/patched/export_demonstration.py",
+    "bytes": 6300,
+    "sha256": "a3fc6b37bdb5cc97c3c72972ab0e6c0f51c5272da8933e1a34be0ef4c61e1f13"
+  },
+  {
+    "source": "robot_patch_20261004/test_demonstration_recording.py",
+    "copy": "competition/reference/patched/test_demonstration_recording.py",
+    "bytes": 5101,
+    "sha256": "71752dc8c910c6eb9f96b5ae180889521df207f7e562a2372710be854fa82e01"
+  },
+  {
+    "source": "robot_patch_20261004/test_demonstration_transport.py",
+    "copy": "competition/reference/patched/test_demonstration_transport.py",
+    "bytes": 9239,
+    "sha256": "6cd4bc4fbdcc80e8560b85b6debe1931d610b106c36a4908a26f1b3163adc62b"
+  },
+  {
+    "source": "robot_patch_20261004/test_factory_replay.py",
+    "copy": "competition/reference/patched/test_factory_replay.py",
+    "bytes": 4503,
+    "sha256": "6de7a9ebd16d976c28e29e4acabf93f2f39635789828c7185eec5915e4f60f79"
+  }
+]

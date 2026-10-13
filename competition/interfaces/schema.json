@@ -1,0 +1,776 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DEEPBOT offline 0.1.0 - not deployed ROS messages",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "camera_frame"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "camera_id": {
+              "enum": [
+                "high",
+                "low"
+              ]
+            },
+            "physical_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "frame_seq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "width_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "encoding": {
+              "enum": [
+                "bgr8",
+                "rgb8",
+                "mono8"
+              ]
+            },
+            "image_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_stamp_ns": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "source_clock_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "receipt_unix_ns": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "receipt_mono_ns": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "camera_id",
+            "physical_id",
+            "frame_seq",
+            "width_px",
+            "height_px",
+            "encoding",
+            "image_ref",
+            "source_stamp_ns",
+            "source_clock_id",
+            "receipt_unix_ns",
+            "receipt_mono_ns"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "frame_pair"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "high_frame_seq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "low_frame_seq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "basis": {
+              "enum": [
+                "source_header",
+                "receipt_approximate"
+              ]
+            },
+            "pairing_clock_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "high_stamp_ns": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "low_stamp_ns": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "delta_ns": {
+              "type": "integer"
+            },
+            "tolerance_ns": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "accepted": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "high_frame_seq",
+            "low_frame_seq",
+            "basis",
+            "pairing_clock_id",
+            "high_stamp_ns",
+            "low_stamp_ns",
+            "delta_ns",
+            "tolerance_ns",
+            "accepted"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "road"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "camera_id": {
+              "enum": [
+                "high",
+                "low"
+              ]
+            },
+            "frame_seq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "width_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "frame_stamp_ns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "valid": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "quality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "reference_x_px": {
+              "type": "number"
+            },
+            "reference_y_px": {
+              "type": "number"
+            },
+            "target_x_px": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "offset_px": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "path_px": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "camera_id",
+            "frame_seq",
+            "width_px",
+            "height_px",
+            "frame_stamp_ns",
+            "valid",
+            "reason",
+            "quality",
+            "reference_x_px",
+            "reference_y_px",
+            "target_x_px",
+            "offset_px",
+            "path_px"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "detections"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "camera_id": {
+              "enum": [
+                "high",
+                "low"
+              ]
+            },
+            "frame_seq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "width_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height_px": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "frame_stamp_ns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "objects": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "class_name": {
+                    "enum": [
+                      "cone",
+                      "crosswalk",
+                      "barrier",
+                      "garage_board",
+                      "garage_entry",
+                      "start_marker"
+                    ]
+                  },
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "bbox_xyxy_px": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 4,
+                    "maxItems": 4
+                  }
+                },
+                "required": [
+                  "class_name",
+                  "score",
+                  "bbox_xyxy_px"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0
+            },
+            "barrier_state": {
+              "enum": [
+                "down",
+                "clear",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "camera_id",
+            "frame_seq",
+            "width_px",
+            "height_px",
+            "frame_stamp_ns",
+            "objects",
+            "barrier_state"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "motion_feedback"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "vx_mps": {
+              "type": "number"
+            },
+            "vy_mps": {
+              "type": "number"
+            },
+            "wz_radps": {
+              "type": "number"
+            },
+            "frame_id": {
+              "enum": [
+                "base_link_contract"
+              ]
+            },
+            "origin": {
+              "enum": [
+                "measured_odometry"
+              ]
+            },
+            "source_topic": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_stamp_ns": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "source_clock_id": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "vx_mps",
+            "vy_mps",
+            "wz_radps",
+            "frame_id",
+            "origin",
+            "source_topic",
+            "source_stamp_ns",
+            "source_clock_id"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "motion_request"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "enum": [
+                "mission",
+                "perception"
+              ]
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "mode": {
+              "enum": [
+                "drive",
+                "stop"
+              ]
+            },
+            "vx_mps": {
+              "type": "number"
+            },
+            "vy_mps": {
+              "type": "number"
+            },
+            "wz_radps": {
+              "type": "number"
+            },
+            "ttl_ms": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 500
+            },
+            "basis_stamp_ns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "source",
+            "request_id",
+            "mode",
+            "vx_mps",
+            "vy_mps",
+            "wz_radps",
+            "ttl_ms",
+            "basis_stamp_ns",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "deepbot.offline/0.1.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "state_event"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stamp_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "event_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "state": {
+              "enum": [
+                "standby",
+                "exit_garage",
+                "road",
+                "cones",
+                "roundabout",
+                "s_curve",
+                "approach_crosswalk",
+                "stopped_dwell",
+                "wait_barrier",
+                "leave_crosswalk",
+                "lap_confirm",
+                "find_garage",
+                "align_garage",
+                "reverse_parking",
+                "complete",
+                "fault"
+              ]
+            },
+            "lap_completed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "segment": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "stop_required": {
+              "type": "boolean"
+            },
+            "barrier_state": {
+              "enum": [
+                "down",
+                "clear",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "event_id",
+            "state",
+            "lap_completed",
+            "segment",
+            "reason",
+            "evidence_refs",
+            "stop_required",
+            "barrier_state"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "session_id",
+        "seq",
+        "stamp_ns",
+        "clock_id",
+        "payload"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

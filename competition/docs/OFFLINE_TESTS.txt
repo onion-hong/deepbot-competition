@@ -1,0 +1,21 @@
+Python 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+test_box_coordinates (test_contract.ContractTests.test_box_coordinates) ... ok
+test_complete_synthetic_exchange (test_contract.ContractTests.test_complete_synthetic_exchange) ... ok
+test_completion_and_legal_wait (test_contract.ContractTests.test_completion_and_legal_wait) ... ok
+test_duplicate_and_missing_frame (test_contract.ContractTests.test_duplicate_and_missing_frame) ... ok
+test_empty_detection_is_unknown (test_contract.ContractTests.test_empty_detection_is_unknown) ... ok
+test_invalid_road_cannot_reuse_path (test_contract.ContractTests.test_invalid_road_cannot_reuse_path) ... ok
+test_nonfinite_bool_version_and_unknown_fields (test_contract.ContractTests.test_nonfinite_bool_version_and_unknown_fields) ... ok
+test_offset_sign_and_units (test_contract.ContractTests.test_offset_sign_and_units) ... ok
+test_pair_skew_and_clock (test_contract.ContractTests.test_pair_skew_and_clock) ... ok
+test_paths (test_contract.ContractTests.test_paths) ... ok
+test_stop_must_be_zero (test_contract.ContractTests.test_stop_must_be_zero) ... ok
+test_ttl_boundary_and_clock_domain (test_contract.ContractTests.test_ttl_boundary_and_clock_domain) ... ok
+test_two_roles_cannot_share_physical_camera (test_contract.ContractTests.test_two_roles_cannot_share_physical_camera) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.062s
+
+OK
+OFFLINE_CONTRACT_OK records=10 version=deepbot.offline/0.1.0 hardware_access=none
+UNITTEST_EXIT=0 SCHEMA_EXIT=0

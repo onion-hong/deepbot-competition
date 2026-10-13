@@ -1,0 +1,24 @@
+{
+  "interface_version": "deepbot.offline/0.1.0",
+  "mode": "offline",
+  "hardware_enabled": false,
+  "ros_distribution": "noetic_historical_unverified_current",
+  "data_root": null,
+  "cameras": {
+    "high": {
+      "physical_id": null,
+      "topic": null
+    },
+    "low": {
+      "physical_id": null,
+      "topic": null
+    }
+  },
+  "pairing_tolerance_ns": null,
+  "limits": {
+    "vx_mps": null,
+    "vy_mps": null,
+    "wz_radps": null
+  },
+  "note": "Null values require evidence; this file is not a launch configuration."
+}
