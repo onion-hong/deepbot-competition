@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="voice_assistant" type="voice_assistant_node.py" name="voice_assistant_node"  output="screen">
+    <param name="port"  value="/dev/voice_assistant"/>
+  </node>
+  <node pkg="voice_assistant" type="artificial_idiot_node.py" name="artificial_idiot_node"  output="screen">
+    <param name="port"  value="/dev/voice_assistant"/>
+  </node>
+
+</launch>

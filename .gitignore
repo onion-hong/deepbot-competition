@@ -4,6 +4,7 @@
 !/.gitattributes
 !/README.md
 !/competition/
+!/vehicle_ws/
 **/__pycache__/
 **/*.py[cod]
 **/.venv/
@@ -39,3 +40,23 @@
 /competition/mission/artifacts/
 # Historical machine-local provenance remains unchanged beside its module.
 /competition/mission/PROVENANCE.json
+
+# Reconstructed catkin workspace: source only.
+/vehicle_ws/build/
+/vehicle_ws/devel/
+/vehicle_ws/install/
+/vehicle_ws/logs/
+/vehicle_ws/.catkin_tools/
+/vehicle_ws/outputs/
+
+# These two historical YOLO directories contain code/config, not bundled weights.
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/models/
+/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/models/**
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/models/**/
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/models/**/*.py
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/models/**/*.yaml
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/data/
+/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/data/**
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/data/**/
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/data/**/*.yaml
+!/vehicle_ws/legacy_packages/rikibot_yolov5/yolov5/data/**/*.sh

@@ -1,0 +1,518 @@
+[
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/bringup.launch",
+    "package": "deepbot_usb_imu",
+    "resource": "launch/deepbot_imu.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/camera.launch",
+    "package": "astra_launch",
+    "resource": "launch/astra.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/camera.launch",
+    "package": "deepbot",
+    "resource": "param/camera_calibration/camera.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/camera.launch",
+    "package": "deepbot",
+    "resource": "param/camera_calibration/camera.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/camera.launch",
+    "package": "jetson_camera",
+    "resource": "launch/jetson_camera.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/camera.launch",
+    "package": "realsense2_camera",
+    "resource": "launch/rs_rgbd.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/laser_scan_odom.launch",
+    "package": "xtrobot",
+    "resource": "urdf/xtrobot_$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/common/costmap_$(arg",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/common/costmap_$(arg",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/common/local_costmap_params.yaml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/common/global_costmap_params.yaml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/common/move_base_params.yaml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/move_base.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/$(arg",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/navigate.launch",
+    "package": "deepbot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/navigate.launch",
+    "package": "deepbot",
+    "resource": "launch/move_base.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/navigate.launch",
+    "package": "deepbot",
+    "resource": "maps/house.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/navigate.launch",
+    "package": "deepbot",
+    "resource": "launch/amcl.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/patrol_nav.launch",
+    "package": "xtrobot",
+    "resource": "launch/navigate.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_gmapping.launch",
+    "package": "xtrobot",
+    "resource": "launch/depth_camera/depth_camera_laser.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_gmapping.launch",
+    "package": "xtrobot",
+    "resource": "param/slam/slam_gmapping.xml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_laser.launch",
+    "package": "astra_launch",
+    "resource": "launch/astrapro.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_laser.launch",
+    "package": "astra_launch",
+    "resource": "launch/astra.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_laser.launch",
+    "package": "realsense2_camera",
+    "resource": "launch/rs_rgbd.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_navigate.launch",
+    "package": "xtrobot",
+    "resource": "launch/depth_camera/depth_camera_laser.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_navigate.launch",
+    "package": "xtrobot",
+    "resource": "maps/house.yaml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_navigate.launch",
+    "package": "xtrobot",
+    "resource": "launch/move_base.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/depth_camera/depth_camera_navigate.launch",
+    "package": "xtrobot",
+    "resource": "launch/amcl.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/lidar/rplidar.launch",
+    "package": "rikibot",
+    "resource": "param/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/lidar/rslidar.launch",
+    "package": "rslidar_sdk",
+    "resource": "launch/start.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/lidar/rslidar.launch",
+    "package": "rikibot",
+    "resource": "param/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/auto_slam.launch",
+    "package": "rikibot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/auto_slam.launch",
+    "package": "rikibot",
+    "resource": "param/slam/slam_gmapping.xml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/auto_slam.launch",
+    "package": "explore_lite",
+    "resource": "launch/explore.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/auto_slam.launch",
+    "package": "rikibot",
+    "resource": "launch/move_base.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/auto_slam.launch",
+    "package": "xtrobot",
+    "resource": "rviz/slam.rviz",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_3d.launch",
+    "package": "xtrobot",
+    "resource": "urdf/xtrobot_x4.urdf",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_3d.launch",
+    "package": "xtrobot",
+    "resource": "launch/include/cartographer",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_3dto2d.launch",
+    "package": "xtrobot",
+    "resource": "urdf/xtrobot_x4.urdf",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_3dto2d.launch",
+    "package": "xtrobot",
+    "resource": "launch/include/cartographer",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/cartographer_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/include/cartographer/cartographer_2d.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/hector_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/hector_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/slam/hectormapping.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/karto_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/lidar_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/lidar_slam.launch",
+    "package": "xtrobot",
+    "resource": "param/slam/slam_gmapping.xml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/rrt_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/lidar/$(env",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/rrt_slam.launch",
+    "package": "xtrobot",
+    "resource": "param/navigation/slam_gmapping.xml",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/slam/rrt_slam.launch",
+    "package": "xtrobot",
+    "resource": "launch/move_base.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/web/web.launch",
+    "package": "rosbridge_server",
+    "resource": "launch/rosbridge_websocket.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/include/cartographer/assets_writer_backpack_3d.launch",
+    "package": "rikibot",
+    "resource": "launch/include/cartographer",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/include/cartographer/assets_writer_backpack_3d.launch",
+    "package": "cartographer_ros",
+    "resource": "urdf/backpack_3d.urdf",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot/launch/include/cartographer/cartographer_2d.launch",
+    "package": "rikibot",
+    "resource": "launch/include/cartographer",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_ar_track/launch/ar_camera.launch",
+    "package": "deepbot",
+    "resource": "launch/camera.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_auto_driver/launch/race.launch",
+    "package": "deepbot",
+    "resource": "launch/camera.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_description/launch/display.launch",
+    "package": "xtrobot_description",
+    "resource": "urdf/xtrobot_description.urdf",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_description/launch/display.launch",
+    "package": "xtrobot_description",
+    "resource": "urdf.rviz",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_description/launch/gazebo.launch",
+    "package": "gazebo_ros",
+    "resource": "launch/empty_world.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_description/launch/gazebo.launch",
+    "package": "xtrobot_description",
+    "resource": "urdf/xtrobot_description.urdf",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/bringup.launch",
+    "package": "xacro",
+    "resource": "xacro",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/bringup.launch",
+    "package": "deepbot_gazebo",
+    "resource": "urdf/gazebo/deepbot.urdf.xacro",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot.launch",
+    "package": "xacro",
+    "resource": "xacro",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot.launch",
+    "package": "deepbot_gazebo",
+    "resource": "urdf/gazebo/deepbot.urdf.xacro",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot.launch",
+    "package": "gazebo_ros",
+    "resource": "launch/empty_world.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot_base.launch",
+    "package": "xacro",
+    "resource": "xacro",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot_base.launch",
+    "package": "deepbot_gazebo",
+    "resource": "urdf/gazebo/deepbot_base.urdf.xacro",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_robot_base.launch",
+    "package": "gazebo_ros",
+    "resource": "launch/empty_world.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/gazebo_world.launch",
+    "package": "gazebo_ros",
+    "resource": "launch/empty_world.launch",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/map_amcl.launch",
+    "package": "deepbot_gazebo",
+    "resource": "maps/$(arg",
+    "status": "dynamic"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/xacro_robot.launch",
+    "package": "xacro",
+    "resource": "xacro",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/xacro_robot.launch",
+    "package": "deepbot_gazebo",
+    "resource": "urdf/xacro/deepbot.urdf.xacro",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_gazebo/launch/xacro_robot_base.launch",
+    "package": "xacro",
+    "resource": "xacro",
+    "status": "external_package"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_racecar/launch/data_collect.launch",
+    "package": "deepbot",
+    "resource": "launch/camera.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_racecar/launch/driver.launch",
+    "package": "deepbot",
+    "resource": "launch/camera.launch",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_yolo_detection/launch/detection.launch",
+    "package": "deepbot_yolo_detection",
+    "resource": "conf/yolov4-tiny.weights",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_yolo_detection/launch/race.launch",
+    "package": "deepbot_yolo_detection",
+    "resource": "conf/yolov4-tiny-race.weights",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/deepbot_yolo_detection/launch/traffic.launch",
+    "package": "deepbot_yolo_detection",
+    "resource": "conf/yolov4-tiny-traffic.weights",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/rikibot_yolov5/launch/rikibot_bottle.launch",
+    "package": "rikibot_yolov5",
+    "resource": "weights/best.pt",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/rikibot_yolov5/launch/rikibot_traffic.launch",
+    "package": "rikibot_yolov5",
+    "resource": "weights/traffic.pt",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/rikibot_yolov5/launch/rikibot_yolov5.launch",
+    "package": "rikibot_yolov5",
+    "resource": "weights/yolov5s.pt",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/camera_node.launch",
+    "package": "uvc_camera",
+    "resource": "example.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/camera_nodelet.launch",
+    "package": "uvc_camera",
+    "resource": "example.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/stereo_node.launch",
+    "package": "uvc_camera",
+    "resource": "example-left.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/stereo_node.launch",
+    "package": "uvc_camera",
+    "resource": "example-right.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/stereo_nodelet.launch",
+    "package": "uvc_camera",
+    "resource": "example-left.yaml",
+    "status": "missing_resource"
+  },
+  {
+    "launch": "vehicle_ws/legacy_packages/uvc_camera/launch/stereo_nodelet.launch",
+    "package": "uvc_camera",
+    "resource": "example-right.yaml",
+    "status": "missing_resource"
+  }
+]

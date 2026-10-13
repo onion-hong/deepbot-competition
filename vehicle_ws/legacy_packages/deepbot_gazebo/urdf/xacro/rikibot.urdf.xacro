@@ -1,0 +1,7 @@
+<robot name="rikibot" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="head.urdf.xacro" />
+    <xacro:include filename="robot_base.urdf.xacro" />
+    <xacro:include filename="camera.urdf.xacro" />
+    <xacro:include filename="lidar.urdf.xacro" />
+    <xacro:include filename="move.urdf.xacro" />
+</robot>

@@ -1,0 +1,7 @@
+<launch>
+ <include file="$(find rikibot)/launch/lidar/$(env XTLIDAR).launch" />
+  <include file="$(find rikibot)/param/slam/slam_gmapping.xml" />
+  <include file="$(find explore_lite)/launch/explore.launch" />
+  <include file="$(find rikibot)/launch/move_base.launch" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find xtrobot)/rviz/slam.rviz" required="true" />
+</launch>

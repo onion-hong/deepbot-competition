@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(deepbot_driver)
+add_compile_options(-std=c++11)
+find_package(catkin REQUIRED COMPONENTS message_generation roscpp rospy riki_msgs
+  std_msgs geometry_msgs sensor_msgs nav_msgs tf tf2 tf2_ros serial)
+add_message_files(FILES Servo.msg)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs)
+catkin_package(INCLUDE_DIRS include CATKIN_DEPENDS message_runtime roscpp rospy
+  riki_msgs std_msgs geometry_msgs sensor_msgs nav_msgs tf tf2 tf2_ros serial)
+include_directories(include ${catkin_INCLUDE_DIRS})
+add_executable(deepbot_driver src/deepbot_driver.cpp)
+add_dependencies(deepbot_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(deepbot_driver ${catkin_LIBRARIES})
+install(TARGETS deepbot_driver RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+install(DIRECTORY launch config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

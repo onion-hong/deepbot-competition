@@ -1,0 +1,32 @@
+<launch>
+  <!-- Curated serial branch only. Default starts no nodes and opens no devices.
+       Description restored from verified URDF/STL; geometry is not a calibration result. -->
+  <arg name="enable_hardware" default="false"/>
+  <arg name="port" default="/dev/deepbotbase"/>
+  <arg name="cmd_vel_topic" default="/vehicle_disabled/cmd_vel"/>
+  <arg name="servo_topic" default="/vehicle_disabled/servo"/>
+  <group if="$(arg enable_hardware)">
+    <param name="robot_description" textfile="$(find deepbot_description)/urdf/deepbot.urdf"/>
+    <include file="$(find deepbot_driver)/launch/deepbot_driver.launch">
+      <arg name="enable_hardware" value="true"/>
+      <arg name="port" value="$(arg port)"/>
+      <arg name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
+      <arg name="servo_topic" value="$(arg servo_topic)"/>
+    </include>
+    <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false">
+      <param name="fixed_frame" value="base_footprint"/>
+      <param name="use_mag" value="false"/>
+      <param name="publish_tf" value="false"/>
+      <param name="use_magnetic_field_msg" value="false"/>
+      <param name="world_frame" value="enu"/>
+      <param name="orientation_stddev" value="0.05"/>
+      <param name="angular_scale" value="1.0"/>
+    </node>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_imu_link" args="0 0 0 0 0 0 /base_footprint /imu_link"/>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_base_link" args="0 0 0 0 0 0 /base_footprint /base_link"/>
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+      <remap from="odometry/filtered" to="odom"/>
+      <rosparam command="load" file="$(find deepbot)/param/ekf/robot_localization.yaml"/>
+    </node>
+  </group>
+</launch>

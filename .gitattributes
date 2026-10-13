@@ -6,3 +6,5 @@
 *.txt text eol=lf
 # Keep provenance copies byte-identical, including original line endings.
 competition/reference/** -text
+# Preserve upstream source/resource bytes for the vehicle provenance manifests.
+vehicle_ws/** -text

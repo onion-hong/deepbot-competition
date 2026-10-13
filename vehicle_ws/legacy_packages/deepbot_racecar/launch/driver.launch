@@ -1,0 +1,18 @@
+<launch>
+     <include file="$(find deepbot)/launch/camera.launch"/>
+     <include file="$(find deepbot_openvino)/launch/detect.launch"/>
+
+     <arg name="camera_type" value="$(env CAMERA)"/>
+     <arg if="$(eval arg('camera_type') == 'astra')" name="input_image"      default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'astrapro')" name="input_image"   default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'usb')" name="input_image"        default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'csi')" name="input_image"        default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'intel')" name="input_image"      default="/camera/color/image_raw"/>
+
+
+      <node name='deep_driver' pkg="deepbot_racecar" type="driver.py" output="screen">
+	<param name="camera_topic" value="$(arg input_image)" type="string" />
+	<param name="speed_x" value="0.2" type="double" />      
+	<param name="voice_on" value="True" type="bool" />      
+      </node> 
+</launch>

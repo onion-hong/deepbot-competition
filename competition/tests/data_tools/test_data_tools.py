@@ -1,6 +1,7 @@
 """Local synthetic tests only. New retained directories; no ROS or hardware startup."""
 import ast
 import copy
+import hashlib
 import importlib.util
 import json
 import os
@@ -27,8 +28,14 @@ RUN = Path(os.environ.get('DATA_TOOLS_TEST_ROOT', str(Path(__file__).parent / 'o
 
 class DataToolsTests(unittest.TestCase):
     def setUp(self):
-        self.root = RUN / self._testMethodName
+        # Keep nested CLI/atomic-write paths short on Windows; preserve the full
+        # test identity in each case directory instead of embedding it in paths.
+        test_id = self.id()
+        case_key = hashlib.sha256(test_id.encode('utf-8')).hexdigest()[:10]
+        self.root = RUN / ('t_' + case_key)
         self.root.mkdir(parents=True, exist_ok=False)
+        with (self.root / 'case.json').open('x', encoding='utf-8') as file:
+            json.dump({'test_id': test_id, 'directory': self.root.name}, file, indent=2)
         self.cfg = load_json(REPO / 'competition/data_tools/synthetic.example.json')
         self.cfg['reserve_bytes'] = 0
 

@@ -1,0 +1,65 @@
+[
+  {
+    "original_relative_path": "src/deepbot_project/rikibot_yolov5/rikibot_yolov5/weights/best.pt",
+    "bytes": 3873245,
+    "sha256": "7fe274f42d3c768d165cab9350de372056fa779e2f52527021035d78ef0a7b4f",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/rikibot_yolov5/rikibot_yolov5/weights/yolov5s.pt",
+    "bytes": 14795158,
+    "sha256": "f1610cfd81f8cab94254b35f6b7da2981fa40f93ad1bd3dd1803c52e7f44753e",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/rikibot_yolov5/rikibot_yolov5/weights/yolov5n.pt",
+    "bytes": 4062133,
+    "sha256": "4f180cf23ba0717ada0badd6c685026d73d48f184d00fc159c2641284b2ac0a3",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/rikibot_yolov5/rikibot_yolov5/weights/traffic.pt",
+    "bytes": 3900645,
+    "sha256": "f94b125f6dcff0ffa957d8d81df78f31e7dbb3fbe24e0584b1c5dc91ec3a246f",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/deepbot_racecar/scripts/autopilot.pth",
+    "bytes": 4208415,
+    "sha256": "d557efdc7296dc42d73651ef3e8acd504f4e7d9d9e5c4b6a91fa6c0e7897daaa",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/deepbot_openvino/model/traffic.bin",
+    "bytes": 7510512,
+    "sha256": "a94f1868393c12059a2e0abf404e92343dcc32b1c1f19c997fb4b59a2b1a0032",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/deepbot_openvino/model/race.bin",
+    "bytes": 7450980,
+    "sha256": "d8a4e0b7ae6361deca698774cdb417a4d55348ed04787a33ee272f4c0d304d8e",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/deepbot_openvino/model/traffic.xml",
+    "bytes": 218074,
+    "sha256": "100ce1bcaac37b583521b3d5f80ecb3a5886ccd56dc77682744c9bccf86faa02",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  },
+  {
+    "original_relative_path": "src/deepbot_project/deepbot_openvino/model/race.xml",
+    "bytes": 209996,
+    "sha256": "963164a6d68467a1e7af9df24f14227f71624b7d2ff5c1fa44afa1d624f506f6",
+    "included": false,
+    "restore": "obtain the same authorized original externally; do not download by filename alone"
+  }
+]

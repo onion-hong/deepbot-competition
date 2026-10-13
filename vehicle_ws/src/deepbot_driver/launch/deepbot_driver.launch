@@ -1,0 +1,15 @@
+<launch>
+  <!-- This entry is inert unless a separate hardware window explicitly enables it. -->
+  <arg name="enable_hardware" default="false"/>
+  <arg name="port" default="/dev/deepbotbase"/>
+  <arg name="cmd_vel_topic" default="/vehicle_disabled/cmd_vel"/>
+  <arg name="servo_topic" default="/vehicle_disabled/servo"/>
+  <group if="$(arg enable_hardware)">
+    <node name="deepbot_driver" pkg="deepbot_driver" type="deepbot_driver" output="screen" respawn="false">
+      <rosparam file="$(find deepbot_driver)/config/deepbot_params.yaml" command="load"/>
+      <param name="port_name" value="$(arg port)"/>
+      <param name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
+      <remap from="servo" to="$(arg servo_topic)"/>
+    </node>
+  </group>
+</launch>

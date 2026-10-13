@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rikibot_ackm_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000877884194545764 -0.00161191094249591 0.0783157973007971"
+        rpy="0 0 0" />
+      <mass
+        value="1.0807729546759" />
+      <inertia
+        ixx="0.00559463647157132"
+        ixy="-7.67025301354418E-05"
+        ixz="-0.00109086141394064"
+        iyy="0.0084083854773588"
+        iyz="3.30581612030919E-05"
+        izz="0.00844388408161758" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_ackm_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_ackm_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

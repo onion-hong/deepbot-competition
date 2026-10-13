@@ -1,0 +1,4 @@
+<robot name="myrobot" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="head.urdf.xacro" />
+    <xacro:include filename="robot_base.urdf.xacro" />
+</robot>

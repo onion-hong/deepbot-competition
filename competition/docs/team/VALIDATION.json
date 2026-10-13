@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-13",
+  "scope": "documentation_only_help_and_static_validation",
+  "python_version": "3.12.14",
+  "help_count": 10,
+  "help_results": [
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py [-h] {start,stop,event,export,inspect} ...\n\nPassive capture CLI: start, stop, event, export, inspect. Never launches\nhardware.\n\npositional arguments:\n  {start,stop,event,export,inspect}\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "start",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py start [-h] --backend {synthetic,ros} --config CONFIG --root\n                         ROOT --session SESSION [--seconds SECONDS]\n\noptions:\n  -h, --help            show this help message and exit\n  --backend {synthetic,ros}\n  --config CONFIG\n  --root ROOT\n  --session SESSION\n  --seconds SECONDS\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "stop",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py stop [-h] --session SESSION\n\noptions:\n  -h, --help         show this help message and exit\n  --session SESSION\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "event",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py event [-h] --session SESSION --type TYPE\n                         [--phase {point,start,end}]\n                         [--interval-id INTERVAL_ID] [--reason REASON]\n\noptions:\n  -h, --help            show this help message and exit\n  --session SESSION\n  --type TYPE\n  --phase {point,start,end}\n  --interval-id INTERVAL_ID\n  --reason REASON\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "export",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py export [-h] --session SESSION --output OUTPUT\n\noptions:\n  -h, --help         show this help message and exit\n  --session SESSION\n  --output OUTPUT\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.data_tools",
+        "inspect",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py inspect [-h] [--session SESSION] [--export EXPORT_PATH]\n                           [--report REPORT]\n\noptions:\n  -h, --help            show this help message and exit\n  --session SESSION\n  --export EXPORT_PATH\n  --report REPORT\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.perception.replay",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: replay.py [-h] --root ROOT [--manifest MANIFEST]\n                 [--camera-id {high,low}]\n                 [--dataset-role {synthetic,static,visual_sequence,unknown}]\n                 --output OUTPUT\n\nReplay image directories or frozen-contract camera_frame JSONL; offline only.\n\noptions:\n  -h, --help            show this help message and exit\n  --root ROOT           image/session root\n  --manifest MANIFEST   camera_frame-only JSONL\n  --camera-id {high,low}\n                        required for directory input\n  --dataset-role {synthetic,static,visual_sequence,unknown}\n  --output OUTPUT       new directory; existing path rejected\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.mission.replay",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: replay.py [-h] {run,demo} ...\n\nOffline JSONL replay: strict inputs, audit log, public outputs, SHA-256\nmanifest.\n\npositional arguments:\n  {run,demo}\n\noptions:\n  -h, --help  show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "competition.mission.replay",
+        "demo",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: replay.py demo [-h] --out OUT\n\noptions:\n  -h, --help  show this help message and exit\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "competition/tests/offline/verify_data_perception.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: verify_data_perception.py [-h] --output OUTPUT\n\nSynthetic B-to-C integration acceptance. No ROS, devices, or motion output.\n\noptions:\n  -h, --help       show this help message and exit\n  --output OUTPUT  new output directory\n",
+      "stderr": ""
+    }
+  ],
+  "relative_link_count": 16,
+  "links": [
+    {
+      "source": "competition/docs/team/DATA_COLLECTION.md",
+      "target": "TEAM_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/DATA_COLLECTION.md",
+      "target": "../../data_tools/vehicle.visual.example.json",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/DATA_COLLECTION.md",
+      "target": "../../data_tools/SCHEMA.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/HANDOFF.md",
+      "target": "TEAM_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/HANDOFF.md",
+      "target": "DATA_COLLECTION.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/HANDOFF.md",
+      "target": "VALIDATION.json",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/HANDOFF.md",
+      "target": "../OFFLINE_STAGE_RECEIPT.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/HANDOFF.md",
+      "target": "../VEHICLE_HANDOFF.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../../../README.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "DATA_COLLECTION.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../../interfaces/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../../data_tools/README.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../../perception/README.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../../mission/README.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "../OFFLINE_STAGE_RECEIPT.md",
+      "exists": true
+    },
+    {
+      "source": "competition/docs/team/TEAM_GUIDE.md",
+      "target": "DATA_COLLECTION.md",
+      "exists": true
+    }
+  ],
+  "documents": [
+    {
+      "path": "competition/docs/team/DATA_COLLECTION.md",
+      "sha256": "16ee584c171ecec25e3d246907ac02034d264dc87281e1dd9924f898e34d9078",
+      "privacy_pattern_hits": {
+        "drive_path": [],
+        "email": [],
+        "ipv4": [],
+        "local_username": []
+      }
+    },
+    {
+      "path": "competition/docs/team/HANDOFF.md",
+      "sha256": "04720d9b88561208c50ff3f17ed046b7ba64a1953b0d2613b95ea8793f7085ae",
+      "privacy_pattern_hits": {
+        "drive_path": [],
+        "email": [],
+        "ipv4": [],
+        "local_username": []
+      }
+    },
+    {
+      "path": "competition/docs/team/TEAM_GUIDE.md",
+      "sha256": "782290feca8860726f1437bb472a6dd21a360eacacc31e9fc9c46a7c71c82168",
+      "privacy_pattern_hits": {
+        "drive_path": [],
+        "email": [],
+        "ipv4": [],
+        "local_username": []
+      }
+    }
+  ],
+  "packing_snippet_python38_syntax": true,
+  "packing_executed": false,
+  "tests_repeated": false,
+  "hardware_access": false,
+  "cli_source_sha256": {
+    "competition/data_tools/__main__.py": "eedaef21c95ee5d20fde14d63e39fde3ea763c899b4852296e0a361e5e969b68",
+    "competition/perception/replay.py": "d467e12ff4fba5ca5158c9ccdc104c964fdd549c0e365a782c5e286296f57774",
+    "competition/mission/replay.py": "61907197a885205997301903cceef2d4868ddd1089938f8c35bec71c3eed0916",
+    "competition/tests/offline/verify_data_perception.py": "62fb87c85448ce8dfd30b35f3462c13c5b7b18bdea5bfcf72dcafd216e162a25"
+  }
+}

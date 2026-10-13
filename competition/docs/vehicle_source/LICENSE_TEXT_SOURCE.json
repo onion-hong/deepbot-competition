@@ -1,0 +1,6 @@
+{
+  "destination": "vehicle_ws/src/uvc_camera/COPYING",
+  "source": "local Git for Windows distribution: mingw64/share/licenses/xz/COPYING.GPLv2",
+  "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+  "reason": "full GPL v2 text accompanying existing uvc_camera GPL declaration; original notices retained"
+}

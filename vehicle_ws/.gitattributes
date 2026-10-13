@@ -1,0 +1,2 @@
+# Preserve captured source/resource hashes and third-party notice bytes on checkout.
+* -text

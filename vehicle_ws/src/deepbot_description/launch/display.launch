@@ -1,0 +1,8 @@
+<launch>
+  <arg name="enable_visualization" default="false"/>
+  <group if="$(arg enable_visualization)">
+    <param name="robot_description" textfile="$(find deepbot_description)/urdf/deepbot.urdf"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node name="rviz" pkg="rviz" type="rviz"/>
+  </group>
+</launch>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rikibot_tank_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00146772320421029 0.000168633503951906 0.0647971639477207"
+        rpy="0 0 0" />
+      <mass
+        value="2.80492704972213" />
+      <inertia
+        ixx="0.0283932084233481"
+        ixy="-7.17024284394321E-05"
+        ixz="-0.00221112183201778"
+        iyy="0.0196934224857061"
+        iyz="-1.93338010553985E-05"
+        izz="0.0367317139663566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_tank_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_tank_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

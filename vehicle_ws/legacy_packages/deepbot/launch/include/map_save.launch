@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="map_server" type="map_saver" name="map_saver1" args="-f /home/xtrobot/catkin_ws/src/xtrobot_project/xtrobot/maps/house" output="screen">	
+	</node>
+</launch>

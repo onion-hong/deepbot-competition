@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rikibot_omni_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.01186950390634 -0.00521517788555276 0.0733945004152503"
+        rpy="0 0 0" />
+      <mass
+        value="1.4275342739386" />
+      <inertia
+        ixx="0.00710455010972928"
+        ixy="-0.000388199033451682"
+        ixz="-0.000726747669130022"
+        iyy="0.00813986077066917"
+        iyz="4.11369037646647E-05"
+        izz="0.0109108892775605" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_omni_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_omni_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

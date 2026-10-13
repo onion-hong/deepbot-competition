@@ -1,0 +1,13 @@
+<launch>
+  <param name="/use_sim_time" value="false"/>
+
+  <include file="$(find deepbot)/launch/lidar/$(env DEEPLIDAR).launch" />
+  <include file="$(find deepbot)/launch/move_base.launch" />
+
+  <arg name="map_file" default="$(find deepbot)/maps/house.yaml"/>
+  <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+
+  <!-- AMCL -->
+  <include file="$(find deepbot)/launch/amcl.launch"/>
+  <node name="multi_mark" pkg="deepbot" type="show_mark.py" output="screen" />
+</launch>

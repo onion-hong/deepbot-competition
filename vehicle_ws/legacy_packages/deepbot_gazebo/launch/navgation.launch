@@ -1,0 +1,14 @@
+<launch>
+  <param name="use_sim_time" value="true"/>
+  <include file="$(find deepbot_gazebo)/launch/map_amcl.launch" />
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="$(find deepbot_gazebo)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find deepbot_gazebo)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find deepbot_gazebo)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find deepbot_gazebo)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find deepbot_gazebo)/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find deepbot_gazebo)/param/move_base_params.yaml" command="load" />
+  </node>
+</launch>
+

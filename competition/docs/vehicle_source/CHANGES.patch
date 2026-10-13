@@ -1,0 +1,639 @@
+--- snapshot/source/home/deepbot/catkin_ws/src/robot_localization/CMakeLists.txt
++++ vehicle_ws/src/robot_localization/CMakeLists.txt
+@@ -152,6 +152,24 @@
+ add_dependencies(navsat_transform ${PROJECT_NAME}_gencpp)
+ add_dependencies(robot_localization_listener_node ${PROJECT_NAME}_gencpp)
+ 
++# Ensure generated message/service headers exist before compilation.
++add_dependencies(filter_utilities ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(filter_base ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ekf ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ukf ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(robot_localization_estimator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ros_robot_localization_listener ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ros_filter_utilities ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ros_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(navsat_transform ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ekf_localization_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ukf_localization_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(navsat_transform_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ekf_localization_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(ukf_localization_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(navsat_transform_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++add_dependencies(robot_localization_listener_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++
+ # Linking
+ target_link_libraries(ros_filter_utilities ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
+ target_link_libraries(filter_utilities ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
+--- snapshot/source/home/deepbot/catkin_ws/src/imu_calib/package.xml
++++ vehicle_ws/src/imu_calib/package.xml
+@@ -22,4 +22,5 @@
+   <depend>yaml-cpp</depend>
+   <depend>riki_msgs</depend>
+ 
++  <build_depend>pkg-config</build_depend>
+ </package>
+--- snapshot/source/home/deepbot/catkin_ws/src/imu_calib/CMakeLists.txt
++++ vehicle_ws/src/imu_calib/CMakeLists.txt
+@@ -8,8 +8,9 @@
+   riki_msgs
+ )
+ 
+-find_package(Eigen REQUIRED)
+-pkg_check_modules(YAML yaml-cpp)
++find_package(Eigen3 REQUIRED)
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(YAML REQUIRED yaml-cpp)
+ 
+ ###################################
+ ## catkin specific configuration ##
+@@ -19,7 +20,7 @@
+   INCLUDE_DIRS include
+   LIBRARIES accel_calib
+   CATKIN_DEPENDS cmake_modules roscpp sensor_msgs riki_msgs
+-  DEPENDS Eigen yaml-cpp
++  DEPENDS EIGEN3 YAML
+ )
+ 
+ ###########
+@@ -29,8 +30,8 @@
+ include_directories(include)
+ include_directories(
+   ${catkin_INCLUDE_DIRS}
+-  ${Eigen_INCLUDE_DIRS}
+-  ${YAML_INCLUDEDIR}
++  ${EIGEN3_INCLUDE_DIRS}
++  ${YAML_INCLUDE_DIRS}
+ )
+ 
+ # accel_calib library
+@@ -74,3 +75,5 @@
+   FILES_MATCHING PATTERN "*.h"
+   PATTERN ".svn" EXCLUDE
+ )
++
++install(FILES LICENSE DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+--- snapshot/source/home/deepbot/catkin_ws/src/camera_umd/uvc_camera/package.xml
++++ vehicle_ws/src/uvc_camera/package.xml
+@@ -70,4 +70,8 @@
+     <!-- Other tools can request additional information be placed here -->
+     <nodelet plugin="${prefix}/nodelet_uvc_camera.xml"/>
+   </export>
++  <build_depend>pluginlib</build_depend>
++  <build_depend>boost</build_depend>
++  <run_depend>pluginlib</run_depend>
++  <run_depend>boost</run_depend>
+ </package>
+--- snapshot/source/home/deepbot/catkin_ws/src/camera_umd/uvc_camera/CMakeLists.txt
++++ vehicle_ws/src/uvc_camera/CMakeLists.txt
+@@ -4,7 +4,7 @@
+ ## Find catkin macros and libraries
+ ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+ ## is used, also find other catkin packages
+-find_package(catkin REQUIRED COMPONENTS camera_info_manager image_transport nodelet roscpp sensor_msgs)
++find_package(catkin REQUIRED COMPONENTS pluginlib camera_info_manager image_transport nodelet roscpp sensor_msgs)
+ 
+ ## System dependencies are found with CMake's conventions
+ find_package(Boost REQUIRED COMPONENTS thread system)
+@@ -53,7 +53,7 @@
+ catkin_package(
+ #  INCLUDE_DIRS include
+    LIBRARIES nodelet_uvc_camera
+-   CATKIN_DEPENDS roscpp nodelet sensor_msgs
++   CATKIN_DEPENDS roscpp nodelet sensor_msgs pluginlib camera_info_manager image_transport
+ #  DEPENDS system_lib
+ )
+ 
+@@ -144,3 +144,6 @@
+ 
+ ## Add folders to be run by python nosetests
+ # catkin_add_nosetests(test)
++
++install(DIRECTORY include/ DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
++install(FILES COPYING DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_description/package.xml
++++ vehicle_ws/src/deepbot_description/package.xml
+@@ -7,14 +7,13 @@
+ for deepbot_description robot</p>
+   </description>
+   <author>TODO</author>
+-  <maintainer email="TODO@email.com" />
++  <maintainer email="TODO@email.com">Upstream maintainer name not supplied</maintainer>
+   <license>BSD</license>
+   <buildtool_depend>catkin</buildtool_depend>
+-  <depend>roslaunch</depend>
+-  <depend>robot_state_publisher</depend>
+-  <depend>rviz</depend>
+-  <depend>joint_state_publisher_gui</depend>
+-  <depend>gazebo</depend>
++  <exec_depend>roslaunch</exec_depend>
++  <exec_depend>robot_state_publisher</exec_depend>
++  <exec_depend>rviz</exec_depend>
++  <exec_depend>joint_state_publisher_gui</exec_depend>
+   <export>
+     <architecture_independent />
+   </export>
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_description/CMakeLists.txt
++++ vehicle_ws/src/deepbot_description/CMakeLists.txt
+@@ -1,14 +1,5 @@
+-cmake_minimum_required(VERSION 2.8.3)
+-
++cmake_minimum_required(VERSION 3.0.2)
+ project(deepbot_description)
+-
+ find_package(catkin REQUIRED)
+-
+ catkin_package()
+-
+-find_package(roslaunch)
+-
+-foreach(dir config launch meshes urdf)
+-	install(DIRECTORY ${dir}/
+-		DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+-endforeach(dir)
++install(DIRECTORY meshes urdf launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot/package.xml
++++ vehicle_ws/src/deepbot/package.xml
+@@ -1,4 +1,4 @@
+-<?xml version="1.0.0"?>
++<?xml version="1.0"?>
+ <package>
+   <name>deepbot</name>
+   <version>1.0.0</version>
+@@ -27,14 +27,13 @@
+     <run_depend>sensor_msgs</run_depend>
+     <run_depend>geometry_msgs</run_depend>
+     <run_depend>std_msgs</run_depend>
+-    <run_depend>gmapping</run_depend>
+-    <run_depend>map_server</run_depend>  
+-    <run_depend>move_base</run_depend>
+-    <run_depend>amcl</run_depend>
+-    <run_depend>xv-11-laser-driver</run_depend>
+-    <run_depend>imu-filter-madgwick</run_depend>
+     <run_depend>imu_calib</run_depend>
+-    <run_depend>riki_pid</run_depend>
+   <export>
+   </export>
++  <run_depend>deepbot_driver</run_depend>
++  <run_depend>uvc_camera</run_depend>
++  <run_depend>imu_filter_madgwick</run_depend>
++  <run_depend>robot_localization</run_depend>
++  <run_depend>tf2_ros</run_depend>
++  <run_depend>deepbot_description</run_depend>
+ </package>
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot/CMakeLists.txt
++++ vehicle_ws/src/deepbot/CMakeLists.txt
+@@ -1,36 +1,18 @@
+-cmake_minimum_required(VERSION 2.8.3)
++cmake_minimum_required(VERSION 3.0.2)
+ project(deepbot)
+-
+-## Find catkin macros and libraries
+-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+-## is used, also find other catkin packages
+-find_package(catkin REQUIRED COMPONENTS
+-  geometry_msgs
+-  roscpp
+-  rospy
+-  rosserial_python
+-  sensor_msgs
+-  riki_msgs
+-  std_msgs
+-  tf
+-)
+-catkin_package(
+-  INCLUDE_DIRS include
+-  LIBRARIES xtrobot
+-  CATKIN_DEPENDS roscpp rospy tf nav_msgs riki_msgs geometry_msgs sensor_msgs std_msgs 
+-  DEPENDS system_lib
+-)
+-
+-###########
+-## Build ##
+-###########
+-
+-include_directories(
+-  include
+-  ${catkin_INCLUDE_DIRS}
+-)
+-
++find_package(catkin REQUIRED COMPONENTS geometry_msgs nav_msgs roscpp rospy sensor_msgs riki_msgs std_msgs tf)
++catkin_package(INCLUDE_DIRS include LIBRARIES deep_base
++  CATKIN_DEPENDS roscpp rospy tf nav_msgs riki_msgs geometry_msgs sensor_msgs std_msgs)
++include_directories(include ${catkin_INCLUDE_DIRS})
+ add_library(deep_base src/xt_base.cpp)
+ add_executable(deep_base_node src/xt_base_node.cpp)
++add_dependencies(deep_base ${catkin_EXPORTED_TARGETS})
++add_dependencies(deep_base_node ${catkin_EXPORTED_TARGETS})
++target_link_libraries(deep_base ${catkin_LIBRARIES})
+ target_link_libraries(deep_base_node deep_base ${catkin_LIBRARIES})
+-
++install(TARGETS deep_base deep_base_node
++  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
++  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
++  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
++install(DIRECTORY include/ DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
++install(DIRECTORY launch param DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_driver/package.xml
++++ vehicle_ws/src/deepbot_driver/package.xml
+@@ -76,4 +76,14 @@
+     <!-- Other tools can request additional information be placed here -->
+ 
+   </export>
++  <build_depend>riki_msgs</build_depend>
++  <build_depend>serial</build_depend>
++  <build_depend>nav_msgs</build_depend>
++  <build_depend>tf2</build_depend>
++  <build_depend>tf2_ros</build_depend>
++  <run_depend>riki_msgs</run_depend>
++  <run_depend>serial</run_depend>
++  <run_depend>nav_msgs</run_depend>
++  <run_depend>tf2</run_depend>
++  <run_depend>tf2_ros</run_depend>
+ </package>
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_driver/CMakeLists.txt
++++ vehicle_ws/src/deepbot_driver/CMakeLists.txt
+@@ -1,215 +1,16 @@
+-cmake_minimum_required(VERSION 2.8.3)
++cmake_minimum_required(VERSION 3.0.2)
+ project(deepbot_driver)
+-
+-## Compile as C++11, supported in ROS Kinetic and newer
+-# add_compile_options(-std=c++11)
+-
+-## Find catkin macros and libraries
+-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+-## is used, also find other catkin packages
+-find_package(catkin REQUIRED COMPONENTS
+-  message_runtime
+-  roscpp
+-  rospy
+-  riki_msgs
+-  std_msgs
+-  tf
+-  serial
+-)
+-
+-add_message_files(
+-  DIRECTORY msg
+-  FILES
+-  Servo.msg
+-)
+-
+-catkin_python_setup()
+-
+-
+-## System dependencies are found with CMake's conventions
+-# find_package(Boost REQUIRED COMPONENTS system)
+-
+-
+-## Uncomment this if the package has a setup.py. This macro ensures
+-## modules and global scripts declared therein get installed
+-## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
+-# catkin_python_setup()
+-
+-################################################
+-## Declare ROS messages, services and actions ##
+-################################################
+-
+-## To declare and build messages, services or actions from within this
+-## package, follow these steps:
+-## * Let MSG_DEP_SET be the set of packages whose message types you use in
+-##   your messages/services/actions (e.g. std_msgs, actionlib_msgs, ...).
+-## * In the file package.xml:
+-##   * add a build_depend tag for "message_generation"
+-##   * add a build_depend and a exec_depend tag for each package in MSG_DEP_SET
+-##   * If MSG_DEP_SET isn't empty the following dependency has been pulled in
+-##     but can be declared for certainty nonetheless:
+-##     * add a exec_depend tag for "message_runtime"
+-## * In this file (CMakeLists.txt):
+-##   * add "message_generation" and every package in MSG_DEP_SET to
+-##     find_package(catkin REQUIRED COMPONENTS ...)
+-##   * add "message_runtime" and every package in MSG_DEP_SET to
+-##     catkin_package(CATKIN_DEPENDS ...)
+-##   * uncomment the add_*_files sections below as needed
+-##     and list every .msg/.srv/.action file to be processed
+-##   * uncomment the generate_messages entry below
+-##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
+-
+-## Generate messages in the 'msg' folder
+-# add_message_files(
+-#   FILES
+-#   Message1.msg
+-#   Message2.msg
+-# )
+-
+-## Generate services in the 'srv' folder
+-# add_service_files(
+-#   FILES
+-#   Service1.srv
+-#   Service2.srv
+-# )
+-
+-## Generate actions in the 'action' folder
+-# add_action_files(
+-#   FILES
+-#   Action1.action
+-#   Action2.action
+-# )
+-
+-## Generate added messages and services with any dependencies listed here
+-# generate_messages(
+-#   DEPENDENCIES
+-#   std_msgs  # Or other packages containing msgs
+-# )
+-
+-################################################
+-## Declare ROS dynamic reconfigure parameters ##
+-################################################
+-
+-## To declare and build dynamic reconfigure parameters within this
+-## package, follow these steps:
+-## * In the file package.xml:
+-##   * add a build_depend and a exec_depend tag for "dynamic_reconfigure"
+-## * In this file (CMakeLists.txt):
+-##   * add "dynamic_reconfigure" to
+-##     find_package(catkin REQUIRED COMPONENTS ...)
+-##   * uncomment the "generate_dynamic_reconfigure_options" section below
+-##     and list every .cfg file to be processed
+-
+-## Generate dynamic reconfigure parameters in the 'cfg' folder
+-# generate_dynamic_reconfigure_options(
+-#	 config/cfg/PID_reconfig.cfg cfg/CalibrateAngular.cfg cfg/CalibrateLinear.cfg 
+-# )
+-
+-###################################
+-## catkin specific configuration ##
+-###################################
+-## The catkin_package macro generates cmake config files for your package
+-## Declare things to be passed to dependent projects
+-## INCLUDE_DIRS: uncomment this if your package contains header files
+-## LIBRARIES: libraries you create in this project that dependent projects also need
+-## CATKIN_DEPENDS: catkin_packages dependent projects also need
+-## DEPENDS: system dependencies of this project that dependent projects also need
++add_compile_options(-std=c++11)
++find_package(catkin REQUIRED COMPONENTS message_generation roscpp rospy riki_msgs
++  std_msgs geometry_msgs sensor_msgs nav_msgs tf tf2 tf2_ros serial)
++add_message_files(FILES Servo.msg)
+ generate_messages(DEPENDENCIES std_msgs geometry_msgs)
+-
+-catkin_package(
+-#  INCLUDE_DIRS include
+-  CATKIN_DEPENDS message_runtime roscpp rospy tf
+-#  DEPENDS system_lib
+-)
+-
+-
+-
+-###########
+-## Build ##
+-###########
+-
+-## Specify additional locations of header files
+-## Your package locations should be listed before other locations
+-include_directories(
+- include
+-  ${catkin_INCLUDE_DIRS}
+-)
+-
+-## Declare a C++ library
+-# add_library(${PROJECT_NAME}
+-#   src/${PROJECT_NAME}/xtark_driver.cpp
+-# )
+-
+-## Add cmake target dependencies of the library
+-## as an example, code may need to be generated before libraries
+-## either from message generation or dynamic reconfigure
+-
+-## Declare a C++ executable
+-## With catkin_make all packages are built within a single CMake context
+-## The recommended prefix ensures that target names across packages don't collide
+-# add_executable(${PROJECT_NAME}_node src/xtark_driver_node.cpp)
+-
+-## Rename C++ executable without prefix
+-## The above recommended prefix causes long target names, the following renames the
+-## target back to the shorter version for ease of user use
+-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
+-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
+-
+-## Add cmake target dependencies of the executable
+-## same as for the library above
+-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+-
+-## Specify libraries to link a library or executable target against
+-# target_link_libraries(${PROJECT_NAME}_node
+-#   ${catkin_LIBRARIES}
+-# )
+-
+-#############
+-## Install ##
+-#############
+-
+-# all install targets should use catkin DESTINATION variables
+-# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
+-
+-## Mark executable scripts (Python etc.) for installation
+-## in contrast to setup.py, you can choose the destination
+-# install(PROGRAMS
+-#   scripts/my_python_script
+-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+-# )
++catkin_package(INCLUDE_DIRS include CATKIN_DEPENDS message_runtime roscpp rospy
++  riki_msgs std_msgs geometry_msgs sensor_msgs nav_msgs tf tf2 tf2_ros serial)
++include_directories(include ${catkin_INCLUDE_DIRS})
+ add_executable(deepbot_driver src/deepbot_driver.cpp)
+-add_dependencies(deepbot_driver ${PROJECT_NAME}_generate_messages_cpp)
+-target_link_libraries(deepbot_driver ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+-## Mark executables and/or libraries for installation
+-# install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node
+-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+-# )
+-
+-## Mark cpp header files for installation
+-# install(DIRECTORY include/${PROJECT_NAME}/
+-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+-#   FILES_MATCHING PATTERN "*.h"
+-#   PATTERN ".svn" EXCLUDE
+-# )
+-
+-## Mark other files for installation (e.g. launch and bag files, etc.)
+-# install(FILES
+-#   # myfile1
+-#   # myfile2
+-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+-# )
+-
+-#############
+-## Testing ##
+-#############
+-
+-## Add gtest based cpp test target and link libraries
+-# catkin_add_gtest(${PROJECT_NAME}-test test/test_xtark_driver.cpp)
+-# if(TARGET ${PROJECT_NAME}-test)
+-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+-# endif()
+-
+-## Add folders to be run by python nosetests
+-# catkin_add_nosetests(test)
++add_dependencies(deepbot_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
++target_link_libraries(deepbot_driver ${catkin_LIBRARIES})
++install(TARGETS deepbot_driver RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
++install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
++install(DIRECTORY launch config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_driver/launch/deepbot_driver.launch
++++ vehicle_ws/src/deepbot_driver/launch/deepbot_driver.launch
+@@ -1,10 +1,15 @@
+ <launch>
+-    <param name="use_sim_time" value="false"/>
+-
+-
+-    <!-- 启动xtark_driver驱动包 -->
+-    <node name="deepbot_driver" pkg="deepbot_driver" type="deepbot_driver" output="screen" respawn="true">
+-        <rosparam file="$(find deepbot_driver)/config/deepbot_params.yaml" command="load"/>
++  <!-- This entry is inert unless a separate hardware window explicitly enables it. -->
++  <arg name="enable_hardware" default="false"/>
++  <arg name="port" default="/dev/deepbotbase"/>
++  <arg name="cmd_vel_topic" default="/vehicle_disabled/cmd_vel"/>
++  <arg name="servo_topic" default="/vehicle_disabled/servo"/>
++  <group if="$(arg enable_hardware)">
++    <node name="deepbot_driver" pkg="deepbot_driver" type="deepbot_driver" output="screen" respawn="false">
++      <rosparam file="$(find deepbot_driver)/config/deepbot_params.yaml" command="load"/>
++      <param name="port_name" value="$(arg port)"/>
++      <param name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
++      <remap from="servo" to="$(arg servo_topic)"/>
+     </node>
+-
++  </group>
+ </launch>
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot/launch/bringup.launch
++++ vehicle_ws/src/deepbot/launch/bringup.launch
+@@ -1,70 +1,32 @@
+ <launch>
+-  <arg name="imu_type" value="$(env DEEPBOTIMU)"/>
+-  <arg name="car_type" value="$(env DEEPBOTMODEL)"/>
+-  <arg name="cmm_type" value="$(env CMM_MODE)"/>
+- 
+-  <arg if="$(eval arg('car_type') == 'x4')" name="low_bat"      default="11.3"/>
+-  <arg if="$(eval arg('car_type') == 'xarm')" name="low_bat"    default="11.3"/>
+-  <arg if="$(eval arg('car_type') == 'xs')" name="low_bat"      default="25.2"/>
+-  <arg if="$(eval arg('car_type') == 'fx4')" name="low_bat"     default="25.2"/>
+-  
+-  <group if="$(eval arg('cmm_type') == 'rosserial')">
+-      <!--serial communication between arduino and pc via usb /-->
+-      <node name="arduino_serial_node" pkg="rosserial_python" type="serial_node.py" output="screen">
+-          <param name="port" value="/dev/deepbotbase" />
+-          <param name="baud" value="115200" />
+-      </node>
+-      <group if="$(eval arg('imu_type') == 'mpu6050')">
+-      <!-- IMU Relay and Filter -->
+-      <!-- IMU relay from deepbot_msgs/Imu to sensor_msgs/Imu -->
+-      	   <node pkg="imu_calib" type="apply_calib" name="apply_calib" output="screen" respawn="false">
+-              <param name="calib_file" value="$(find deepbot)/param/imu/imu_calib.yaml" />
+-              <param name="calibrate_gyros" value="true" />
+-           </node>
+-
+-      </group>
+-
+-      <group if="$(eval arg('imu_type') == 'hfi')">
+-           <include file="$(find deepbot_usb_imu)/launch/deepbot_imu.launch" />
+-      </group>
+-
+-
+-    <!-- Publish deepbot odometry -->
+-    <node pkg="deepbot" name="deep_base_node" type="deep_base_node">
+-    	<param name="linear_scale" type="double" value="1.0" />
+-    	<param name="low_battery" type="double" value="$(arg low_bat)" />
++  <!-- Curated serial branch only. Default starts no nodes and opens no devices.
++       Description restored from verified URDF/STL; geometry is not a calibration result. -->
++  <arg name="enable_hardware" default="false"/>
++  <arg name="port" default="/dev/deepbotbase"/>
++  <arg name="cmd_vel_topic" default="/vehicle_disabled/cmd_vel"/>
++  <arg name="servo_topic" default="/vehicle_disabled/servo"/>
++  <group if="$(arg enable_hardware)">
++    <param name="robot_description" textfile="$(find deepbot_description)/urdf/deepbot.urdf"/>
++    <include file="$(find deepbot_driver)/launch/deepbot_driver.launch">
++      <arg name="enable_hardware" value="true"/>
++      <arg name="port" value="$(arg port)"/>
++      <arg name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
++      <arg name="servo_topic" value="$(arg servo_topic)"/>
++    </include>
++    <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false">
++      <param name="fixed_frame" value="base_footprint"/>
++      <param name="use_mag" value="false"/>
++      <param name="publish_tf" value="false"/>
++      <param name="use_magnetic_field_msg" value="false"/>
++      <param name="world_frame" value="enu"/>
++      <param name="orientation_stddev" value="0.05"/>
++      <param name="angular_scale" value="1.0"/>
++    </node>
++    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_imu_link" args="0 0 0 0 0 0 /base_footprint /imu_link"/>
++    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_base_link" args="0 0 0 0 0 0 /base_footprint /base_link"/>
++    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
++      <remap from="odometry/filtered" to="odom"/>
++      <rosparam command="load" file="$(find deepbot)/param/ekf/robot_localization.yaml"/>
+     </node>
+   </group>
+-
+-  <group if="$(eval arg('cmm_type') == 'serial')">
+-      <include file="$(find deepbot_driver)/launch/deepbot_driver.launch" />
+-  </group>
+-
+-
+-      <!-- Filter and fuse raw imu data -->
+-      <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false" >
+-          <param name="fixed_frame" value="base_footprint" />
+-          <param name="use_mag" value="false" />
+-          <param name="publish_tf" value="false" />
+-          <param name="use_magnetic_field_msg" value="false" />
+-          <param name="world_frame" value="enu" />
+-          <param name="orientation_stddev" value="0.05" />
+-          <param name="angular_scale" value="1.0" />
+-      </node>
+-
+-
+-    <!-- Publish static transform from base_footprint to imu_link -->
+-    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_imu_link" args="0 0 0 0 0 0  /base_footprint /imu_link"/>
+-
+-    <!-- Publish static transform from base_footprint to base_link -->
+-    <node pkg="tf2_ros" type="static_transform_publisher" name="base_footprint_to_base_link" args="0 0 0 0 0 0  /base_footprint /base_link "/>
+-
+-    <!-- Odom-IMU Extended Kalman Filter-->
+-    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization"> 
+-        <remap from="odometry/filtered" to="odom" />
+-        <rosparam command="load" file="$(find deepbot)/param/ekf/robot_localization.yaml" />
+-    </node>
+-
+-    <param name="robot_description" textfile="$(find deepbot_description)/urdf/deepbot.urdf" />
+-    <!--node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /-->
+ </launch>
+--- snapshot/source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_description/launch/display.launch
++++ vehicle_ws/src/deepbot_description/launch/display.launch
+@@ -1,20 +1,8 @@
+ <launch>
+-  <arg
+-    name="model" />
+-  <param
+-    name="robot_description"
+-    textfile="$(find xtrobot_description)/urdf/xtrobot_description.urdf" />
+-  <node
+-    name="joint_state_publisher_gui"
+-    pkg="joint_state_publisher_gui"
+-    type="joint_state_publisher_gui" />
+-  <node
+-    name="robot_state_publisher"
+-    pkg="robot_state_publisher"
+-    type="robot_state_publisher" />
+-  <node
+-    name="rviz"
+-    pkg="rviz"
+-    type="rviz"
+-    args="-d $(find xtrobot_description)/urdf.rviz" />
++  <arg name="enable_visualization" default="false"/>
++  <group if="$(arg enable_visualization)">
++    <param name="robot_description" textfile="$(find deepbot_description)/urdf/deepbot.urdf"/>
++    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
++    <node name="rviz" pkg="rviz" type="rviz"/>
++  </group>
+ </launch>

@@ -1,0 +1,17 @@
+<launch>
+  <!--这里可以指定机器人的初始位置-->>
+  <arg name="x_pos" default="1"/>
+  <arg name="y_pos" default="2"/>
+  <arg name="z_pos" default="0.0"/>
+  <param name="/use_sim_time" value="true" />  
+  <!-- 启动 gazebo -->
+  <include file="$(find deepbot_gazebo)/launch/gazebo_world.launch"/>
+  <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find deepbot_gazebo)/urdf/gazebo/deepbot.urdf.xacro" />
+  <!-- 在 gazebo 中显示机器人模型 -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model deepbot.xacro -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+  <!-- 添加关节状态发布节点 -->
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+  <!-- 添加机器人状态发布节点 -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+</launch>

@@ -1,0 +1,15 @@
+stride: 32
+names:
+  0: brake
+  1: bottle
+  2: speed_40
+  3: uturn
+  4: forbid
+  5: stop
+  6: parking
+  7: person
+  8: traffic_red
+  9: traffic_green
+  10: traffic_yellow
+  11: turn_right
+  12: crossing

@@ -1,0 +1,1866 @@
+{
+  "camera_umd": {
+    "source_root": "source/home/deepbot/catkin_ws/src/camera_umd/camera_umd",
+    "version": "0.2.7",
+    "license_declarations": [
+      "GPLv2"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "run_depend",
+        "name": "uvc_camera"
+      },
+      {
+        "kind": "run_depend",
+        "name": "jpeg_streamer"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/camera_umd"
+    ]
+  },
+  "jpeg_streamer": {
+    "source_root": "source/home/deepbot/catkin_ws/src/camera_umd/jpeg_streamer",
+    "version": "0.2.7",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/jpeg_streamer"
+    ]
+  },
+  "uvc_camera": {
+    "source_root": "source/home/deepbot/catkin_ws/src/camera_umd/uvc_camera",
+    "version": "0.2.7",
+    "license_declarations": [
+      "GPLv2"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "camera_info_manager"
+      },
+      {
+        "kind": "build_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "libv4l-dev"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "camera_info_manager"
+      },
+      {
+        "kind": "run_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "libv4l-dev"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "camera_info_manager"
+      },
+      {
+        "kind": "build_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "libv4l-dev"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "camera_info_manager"
+      },
+      {
+        "kind": "run_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "libv4l-dev"
+      },
+      {
+        "kind": "build_depend",
+        "name": "pluginlib"
+      },
+      {
+        "kind": "build_depend",
+        "name": "boost"
+      },
+      {
+        "kind": "run_depend",
+        "name": "pluginlib"
+      },
+      {
+        "kind": "run_depend",
+        "name": "boost"
+      }
+    ],
+    "active_root": "vehicle_ws/src/uvc_camera",
+    "workspace_roots": [
+      "vehicle_ws/src/uvc_camera"
+    ]
+  },
+  "deepbot": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot",
+    "version": "1.0.0",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rosserial_python"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "gmapping"
+      },
+      {
+        "kind": "run_depend",
+        "name": "map_server"
+      },
+      {
+        "kind": "run_depend",
+        "name": "move_base"
+      },
+      {
+        "kind": "run_depend",
+        "name": "amcl"
+      },
+      {
+        "kind": "run_depend",
+        "name": "xv-11-laser-driver"
+      },
+      {
+        "kind": "run_depend",
+        "name": "imu-filter-madgwick"
+      },
+      {
+        "kind": "run_depend",
+        "name": "imu_calib"
+      },
+      {
+        "kind": "run_depend",
+        "name": "riki_pid"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rosserial_python"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "imu_calib"
+      },
+      {
+        "kind": "run_depend",
+        "name": "deepbot_driver"
+      },
+      {
+        "kind": "run_depend",
+        "name": "uvc_camera"
+      },
+      {
+        "kind": "run_depend",
+        "name": "imu_filter_madgwick"
+      },
+      {
+        "kind": "run_depend",
+        "name": "robot_localization"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf2_ros"
+      },
+      {
+        "kind": "run_depend",
+        "name": "deepbot_description"
+      }
+    ],
+    "active_root": "vehicle_ws/src/deepbot",
+    "workspace_roots": [
+      "vehicle_ws/src/deepbot"
+    ]
+  },
+  "deepbot_ar_track": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_ar_track",
+    "version": "0.1.0",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "ar_track_alvar"
+      },
+      {
+        "kind": "build_depend",
+        "name": "ar_track_alvar_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "ar_track_alvar"
+      },
+      {
+        "kind": "run_depend",
+        "name": "ar_track_alvar_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_ar_track"
+    ]
+  },
+  "deepbot_auto_driver": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_auto_drvier",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_auto_driver"
+    ]
+  },
+  "deepbot_description": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_description",
+    "version": "1.0.0",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "depend",
+        "name": "roslaunch"
+      },
+      {
+        "kind": "depend",
+        "name": "robot_state_publisher"
+      },
+      {
+        "kind": "depend",
+        "name": "rviz"
+      },
+      {
+        "kind": "depend",
+        "name": "joint_state_publisher_gui"
+      },
+      {
+        "kind": "depend",
+        "name": "gazebo"
+      }
+    ],
+    "category": "core_resource",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "roslaunch"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "robot_state_publisher"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rviz"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "joint_state_publisher_gui"
+      }
+    ],
+    "active_root": "vehicle_ws/src/deepbot_description",
+    "workspace_roots": [
+      "vehicle_ws/src/deepbot_description"
+    ]
+  },
+  "deepbot_driver": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_driver",
+    "version": "0.1.1",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "run_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "message_runtime"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "run_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "build_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "serial"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf2"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf2_ros"
+      },
+      {
+        "kind": "run_depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "serial"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf2"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf2_ros"
+      }
+    ],
+    "active_root": "vehicle_ws/src/deepbot_driver",
+    "workspace_roots": [
+      "vehicle_ws/src/deepbot_driver"
+    ]
+  },
+  "deepbot_gazebo": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_gazebo",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_gazebo"
+    ]
+  },
+  "deepbot_line_follower": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_line_follower",
+    "version": "0.0.0",
+    "license_declarations": [
+      "MIT"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_line_follower"
+    ]
+  },
+  "riki_msgs": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_msgs",
+    "version": "0.0.1",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      }
+    ],
+    "active_root": "vehicle_ws/src/riki_msgs",
+    "workspace_roots": [
+      "vehicle_ws/src/riki_msgs"
+    ]
+  },
+  "deepbot_nav": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_nav",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "actionlib"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "move_base_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "orocos_kdl"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "build_depend",
+        "name": "visualization_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "actionlib"
+      },
+      {
+        "kind": "run_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "run_depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "move_base_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "orocos_kdl"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "run_depend",
+        "name": "tf"
+      },
+      {
+        "kind": "run_depend",
+        "name": "visualization_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_nav"
+    ]
+  },
+  "deepbot_object_detect": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_object_detect",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "dynamic_reconfigure"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_object_detect"
+    ]
+  },
+  "deepbot_object_plate": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_object_plate",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "dynamic_reconfigure"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_object_plate"
+    ]
+  },
+  "deepbot_openvino": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_openvino",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "dynamic_reconfigure"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_openvino"
+    ]
+  },
+  "deepbot_racecar": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_racecar",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "dynamic_reconfigure"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_racecar"
+    ]
+  },
+  "deepbot_yolo_detection": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/deepbot_yolo_detection",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "cv_bridge"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "cv_bridge"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "image_transport"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/deepbot_yolo_detection"
+    ]
+  },
+  "rikibot_yolov5": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/rikibot_yolov5/rikibot_yolov5",
+    "version": "1.0.1",
+    "license_declarations": [
+      "APLv2"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "rospy"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/rikibot_yolov5"
+    ]
+  },
+  "yolov5_ros_msgs": {
+    "source_root": "source/home/deepbot/catkin_ws/src/deepbot_project/rikibot_yolov5/yolov5_ros_msgs",
+    "version": "1.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_export_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "std_msgs"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/yolov5_ros_msgs"
+    ]
+  },
+  "imu_calib": {
+    "source_root": "source/home/deepbot/catkin_ws/src/imu_calib",
+    "version": "0.0.0",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "depend",
+        "name": "cmake_modules"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen"
+      },
+      {
+        "kind": "depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "yaml-cpp"
+      },
+      {
+        "kind": "depend",
+        "name": "riki_msgs"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "depend",
+        "name": "cmake_modules"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen"
+      },
+      {
+        "kind": "depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "yaml-cpp"
+      },
+      {
+        "kind": "depend",
+        "name": "riki_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "pkg-config"
+      }
+    ],
+    "active_root": "vehicle_ws/src/imu_calib",
+    "workspace_roots": [
+      "vehicle_ws/src/imu_calib"
+    ]
+  },
+  "opencv_apps": {
+    "source_root": "source/home/deepbot/catkin_ws/src/opencv_apps",
+    "version": "2.0.0",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "build_depend",
+        "name": "cv_bridge"
+      },
+      {
+        "kind": "build_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "build_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "build_depend",
+        "name": "std_srvs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "cv_bridge"
+      },
+      {
+        "kind": "run_depend",
+        "name": "dynamic_reconfigure"
+      },
+      {
+        "kind": "run_depend",
+        "name": "image_transport"
+      },
+      {
+        "kind": "run_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "run_depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "run_depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "run_depend",
+        "name": "std_srvs"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rostest"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosbag"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosservice"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rostopic"
+      },
+      {
+        "kind": "test_depend",
+        "name": "image_proc"
+      },
+      {
+        "kind": "test_depend",
+        "name": "image_view"
+      },
+      {
+        "kind": "test_depend",
+        "name": "topic_tools"
+      },
+      {
+        "kind": "test_depend",
+        "name": "compressed_image_transport"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/opencv_apps"
+    ]
+  },
+  "robot_localization": {
+    "source_root": "source/home/deepbot/catkin_ws/src/robot_localization",
+    "version": "2.6.8",
+    "license_declarations": [
+      "BSD"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "depend",
+        "name": "cmake_modules"
+      },
+      {
+        "kind": "depend",
+        "name": "diagnostic_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "diagnostic_updater"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen_conversions"
+      },
+      {
+        "kind": "depend",
+        "name": "geographic_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "message_filters"
+      },
+      {
+        "kind": "depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "std_srvs"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2_geometry_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2_ros"
+      },
+      {
+        "kind": "depend",
+        "name": "xmlrpcpp"
+      },
+      {
+        "kind": "depend",
+        "name": "yaml-cpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geographiclib"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "python-catkin-pkg"
+      },
+      {
+        "kind": "build_depend",
+        "name": "python3-catkin-pkg"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roslint"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosbag"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rostest"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosunit"
+      }
+    ],
+    "category": "core",
+    "curated_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      },
+      {
+        "kind": "depend",
+        "name": "cmake_modules"
+      },
+      {
+        "kind": "depend",
+        "name": "diagnostic_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "diagnostic_updater"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen"
+      },
+      {
+        "kind": "depend",
+        "name": "eigen_conversions"
+      },
+      {
+        "kind": "depend",
+        "name": "geographic_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "geometry_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "message_filters"
+      },
+      {
+        "kind": "depend",
+        "name": "nav_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "nodelet"
+      },
+      {
+        "kind": "depend",
+        "name": "roscpp"
+      },
+      {
+        "kind": "depend",
+        "name": "sensor_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "std_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "std_srvs"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2_geometry_msgs"
+      },
+      {
+        "kind": "depend",
+        "name": "tf2_ros"
+      },
+      {
+        "kind": "depend",
+        "name": "xmlrpcpp"
+      },
+      {
+        "kind": "depend",
+        "name": "yaml-cpp"
+      },
+      {
+        "kind": "build_depend",
+        "name": "geographiclib"
+      },
+      {
+        "kind": "build_depend",
+        "name": "message_generation"
+      },
+      {
+        "kind": "build_depend",
+        "name": "python-catkin-pkg"
+      },
+      {
+        "kind": "build_depend",
+        "name": "python3-catkin-pkg"
+      },
+      {
+        "kind": "build_depend",
+        "name": "roslint"
+      },
+      {
+        "kind": "exec_depend",
+        "name": "message_runtime"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosbag"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rostest"
+      },
+      {
+        "kind": "test_depend",
+        "name": "rosunit"
+      }
+    ],
+    "active_root": "vehicle_ws/src/robot_localization",
+    "workspace_roots": [
+      "vehicle_ws/src/robot_localization"
+    ]
+  },
+  "voice_assistant": {
+    "source_root": "source/home/deepbot/catkin_ws/src/voice_assistant",
+    "version": "0.0.0",
+    "license_declarations": [
+      "TODO"
+    ],
+    "original_dependencies": [
+      {
+        "kind": "buildtool_depend",
+        "name": "catkin"
+      }
+    ],
+    "category": "reference_only",
+    "active_root": null,
+    "workspace_roots": [
+      "vehicle_ws/legacy_packages/voice_assistant"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find xtrobot)/launch/lidar/$(env XTLIDAR).launch" />
+  <include file="$(find xtrobot)/param/slam/slam_gmapping.xml" />
+  <!--include file="$(find xtrobot)/param/navigation/move_base.xml" /-->
+</launch>

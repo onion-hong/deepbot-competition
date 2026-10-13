@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rikibot_2wd_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00995295222905807 -0.0101353003402308 0.0740183829362649"
+        rpy="0 0 0" />
+      <mass
+        value="0.950140492212968" />
+      <inertia
+        ixx="0.00516103389752179"
+        ixy="-0.000442661320569572"
+        ixz="-0.000670583162645748"
+        iyy="0.0053035153051488"
+        iyz="-0.000264509862317069"
+        izz="0.00534430840774003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_2wd_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rikibot_2wd_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

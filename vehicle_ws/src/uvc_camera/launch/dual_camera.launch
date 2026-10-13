@@ -1,0 +1,24 @@
+<launch>
+  <!-- Candidate mapping from 2026-10-13; recheck identity before any hardware window. -->
+  <arg name="enable_hardware" default="false"/>
+  <arg name="high_device" default="/dev/v4l/by-path/pci-0000:00:14.0-usb-0:3:1.0-video-index0"/>
+  <arg name="low_device" default="/dev/v4l/by-path/pci-0000:00:14.0-usb-0:2:1.0-video-index0"/>
+  <group if="$(arg enable_hardware)">
+    <group ns="camera_high">
+      <node pkg="uvc_camera" type="uvc_camera_node" name="camera_high" output="screen">
+        <param name="device" value="$(arg high_device)"/>
+        <param name="width" value="1280"/><param name="height" value="720"/>
+        <param name="fps" value="30"/><param name="format" value="jpeg"/>
+        <param name="frame_id" value="camera"/>
+      </node>
+    </group>
+    <group ns="camera_low">
+      <node pkg="uvc_camera" type="uvc_camera_node" name="camera_low" output="screen">
+        <param name="device" value="$(arg low_device)"/>
+        <param name="width" value="1280"/><param name="height" value="720"/>
+        <param name="fps" value="30"/><param name="format" value="jpeg"/>
+        <param name="frame_id" value="camera"/>
+      </node>
+    </group>
+  </group>
+</launch>

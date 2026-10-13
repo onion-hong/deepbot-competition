@@ -1,0 +1,136 @@
+{
+  "scope": "independent local static and byte checks; no build/source execution/hardware",
+  "workspace_manifest_entries": 994,
+  "workspace_missing": [],
+  "workspace_hash_mismatch": [],
+  "original_source_missing": [],
+  "original_source_hash_mismatch": [],
+  "recorded_destination_hash_mismatch": [],
+  "modified_files": [
+    "vehicle_ws/src/robot_localization/CMakeLists.txt",
+    "vehicle_ws/src/imu_calib/package.xml",
+    "vehicle_ws/src/imu_calib/CMakeLists.txt",
+    "vehicle_ws/src/uvc_camera/package.xml",
+    "vehicle_ws/src/uvc_camera/CMakeLists.txt",
+    "vehicle_ws/src/deepbot_description/package.xml",
+    "vehicle_ws/src/deepbot_description/CMakeLists.txt",
+    "vehicle_ws/src/deepbot/package.xml",
+    "vehicle_ws/src/deepbot/CMakeLists.txt",
+    "vehicle_ws/src/deepbot_driver/package.xml",
+    "vehicle_ws/src/deepbot_driver/CMakeLists.txt",
+    "vehicle_ws/src/deepbot_driver/launch/deepbot_driver.launch",
+    "vehicle_ws/src/deepbot/launch/bringup.launch",
+    "vehicle_ws/src/deepbot_description/launch/display.launch"
+  ],
+  "mapped_source_count": 988,
+  "urdf_resource_checks": [
+    {
+      "file": "vehicle_ws/src/deepbot_description/urdf/deepbot.urdf",
+      "uri": "package://deepbot_description/meshes/base_link.STL",
+      "exists": true
+    },
+    {
+      "file": "vehicle_ws/src/deepbot_description/urdf/deepbot.urdf",
+      "uri": "package://deepbot_description/meshes/base_link.STL",
+      "exists": true
+    }
+  ],
+  "git_filter_checks": [
+    {
+      "file": "vehicle_ws/src/deepbot_driver/CMakeLists.txt",
+      "raw_blob": "c16ea120373e4c7e1f6bafdbafd8bc5691f18576",
+      "filtered_blob": "c16ea120373e4c7e1f6bafdbafd8bc5691f18576",
+      "byte_preserving": true,
+      "attributes": [
+        "vehicle_ws/src/deepbot_driver/CMakeLists.txt: text: unset",
+        "vehicle_ws/src/deepbot_driver/CMakeLists.txt: eol: lf"
+      ]
+    },
+    {
+      "file": "vehicle_ws/src/uvc_camera/src/camera.cpp",
+      "raw_blob": "4f53dff75137064bb82b2999dacd12f19e2863b1",
+      "filtered_blob": "4f53dff75137064bb82b2999dacd12f19e2863b1",
+      "byte_preserving": true,
+      "attributes": [
+        "vehicle_ws/src/uvc_camera/src/camera.cpp: text: unset",
+        "vehicle_ws/src/uvc_camera/src/camera.cpp: eol: unspecified"
+      ]
+    },
+    {
+      "file": "vehicle_ws/legacy_packages/deepbot_auto_driver/scripts/auto_run.py",
+      "raw_blob": "a1f3c666490fe6ec7382d000ef8bafaa5a7f26a3",
+      "filtered_blob": "a1f3c666490fe6ec7382d000ef8bafaa5a7f26a3",
+      "byte_preserving": true,
+      "attributes": [
+        "vehicle_ws/legacy_packages/deepbot_auto_driver/scripts/auto_run.py: text: unset",
+        "vehicle_ws/legacy_packages/deepbot_auto_driver/scripts/auto_run.py: eol: lf"
+      ]
+    }
+  ],
+  "guard_checks": [
+    {
+      "file": "deepbot/launch/bringup.launch",
+      "default": "false",
+      "unguarded_nodes_or_includes": []
+    },
+    {
+      "file": "deepbot_driver/launch/deepbot_driver.launch",
+      "default": "false",
+      "unguarded_nodes_or_includes": []
+    },
+    {
+      "file": "uvc_camera/launch/dual_camera.launch",
+      "default": "false",
+      "unguarded_nodes_or_includes": []
+    }
+  ],
+  "core_python_files": [
+    {
+      "file": "vehicle_ws/src/robot_localization/doc/conf.py",
+      "crlf_count": 0,
+      "has_shebang": false
+    }
+  ],
+  "unlisted_workspace_files": [],
+  "executable_manifest_issues": [],
+  "documentation_links": [
+    {
+      "file": "vehicle_ws/README.md",
+      "target": "../competition/docs/vehicle_source/PACKAGES.json",
+      "exists": true
+    },
+    {
+      "file": "vehicle_ws/README.md",
+      "target": "../competition/docs/vehicle_source/DEPENDENCIES.md",
+      "exists": true
+    },
+    {
+      "file": "vehicle_ws/README.md",
+      "target": "../competition/docs/vehicle_source/HANDOFF.md",
+      "exists": true
+    },
+    {
+      "file": "vehicle_ws/README.md",
+      "target": "NOTICE.md",
+      "exists": true
+    },
+    {
+      "file": "vehicle_ws/README.md",
+      "target": "../competition/docs/vehicle_source/EXTERNAL_ASSETS.md",
+      "exists": true
+    }
+  ],
+  "active_packages": [
+    "deepbot",
+    "deepbot_description",
+    "deepbot_driver",
+    "imu_calib",
+    "riki_msgs",
+    "robot_localization",
+    "uvc_camera"
+  ],
+  "legacy_ignored": true,
+  "executable_manifest_count": 87,
+  "all_manifest_files_git_text_unset": true,
+  "git_attribute_verified_count": 994
+}

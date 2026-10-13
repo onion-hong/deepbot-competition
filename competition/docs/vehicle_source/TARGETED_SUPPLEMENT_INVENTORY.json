@@ -1,0 +1,366 @@
+[
+  {
+    "relative_path": "deepbot_project/deepbot_description/meshes/base_link.STL",
+    "copy": true,
+    "bytes": 8861784,
+    "sha256": "bb369b97902ee101eff8bb8802c25eca785dae5f70627775298211e529a788d7",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/conf/coco.names",
+    "copy": true,
+    "bytes": 625,
+    "sha256": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/conf/race.names",
+    "copy": true,
+    "bytes": 29,
+    "sha256": "1e78868f055e96fdfbdbb7678ac00084948f28318600f95020bfbbda6f83585f",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/conf/traffic.names",
+    "copy": true,
+    "bytes": 116,
+    "sha256": "a8faf2510ea611d89c47627f4239c6b3977fa0904222ed6d0e1d0a6af0468cd7",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/Makefile",
+    "copy": true,
+    "bytes": 5680,
+    "sha256": "f4a6989348be86deae74f540f388ee2483999a5910e9a8714624caa685fdcb51",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/build.ps1",
+    "copy": true,
+    "bytes": 8453,
+    "sha256": "f9c94356c92113c4dd6c68df28e2471ed0cf4c2b4ce16c22698bc35726366a1e",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/9k.labels",
+    "copy": true,
+    "bytes": 94180,
+    "sha256": "2bd6c1881c7f14b1a01b091584fa66c982f0f72e574ce861ccef5a9402219fac",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/9k.names",
+    "copy": true,
+    "bytes": 99137,
+    "sha256": "ec9d79f248c0faff73e84b1980eb0b0ef56ad46005ba0b61bf8ab1d7f844f038",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/9k.tree",
+    "copy": true,
+    "bytes": 149465,
+    "sha256": "5478b175142cae30fac4bc074ce8268df83aef06c5de288de05dd4adfd96d511",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/coco.data",
+    "copy": true,
+    "bytes": 183,
+    "sha256": "ab9532668f59709f1dd240389676db1b50598667e6089a671b795ab54d76df24",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/coco.names",
+    "copy": true,
+    "bytes": 625,
+    "sha256": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/coco9k.map",
+    "copy": true,
+    "bytes": 387,
+    "sha256": "c0c1dad8d73734d881d21ec3237788b5f1033ec690f42839a3587752f9b637bb",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/combine9k.data",
+    "copy": true,
+    "bytes": 273,
+    "sha256": "75877a8541cd4938a410351e83ab4b4649140677a718ddab8319a670b160f2b3",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/custom.data",
+    "copy": true,
+    "bytes": 216,
+    "sha256": "4a902e595dbd60de49f18fb7ad6660a450f18e80bdf0631140af59af3a9f9ae8",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/imagenet.labels.list",
+    "copy": true,
+    "bytes": 218420,
+    "sha256": "862f0b616543c2467bf66c967c173ef748c4d11244ee223ffd13e6591735ca0b",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/imagenet.shortnames.list",
+    "copy": true,
+    "bytes": 246356,
+    "sha256": "6ba751a14e6470ccaf740476ab79df657925d29d9f29311629eed20f7efb0ed5",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/imagenet1k.data",
+    "copy": true,
+    "bytes": 218,
+    "sha256": "e987509b4fe3eb1129d65207ffba22733fb0373073eaa9180e000d727402d1c3",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/imagenet22k.dataset",
+    "copy": true,
+    "bytes": 223,
+    "sha256": "6d07249aa90002a1fc1630ab2737aa2056fac659c060012c21e4746c80e090e1",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/imagenet9k.hierarchy.dataset",
+    "copy": true,
+    "bytes": 205,
+    "sha256": "f6a49a0f18649ea21d64f4fc5381f31f491f6bdd04a6ce7d80dc2a1860ef5430",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/inet9k.map",
+    "copy": true,
+    "bytes": 972,
+    "sha256": "065b8f891b22cc2f4530abc47da3f01c775338a92c361400f7a2668d0a7ecce9",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/labels.names",
+    "copy": true,
+    "bytes": 54,
+    "sha256": "a63c5084b4ab13dc7ac9fd47aff56eafbde0e138020b38e502074e09ce20443b",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/openimages.data",
+    "copy": true,
+    "bytes": 200,
+    "sha256": "f6fcd4ef274fbc02fb8b122549079d719d6dfb773478e3fe51590d481c4b7edc",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/traffic.names",
+    "copy": true,
+    "bytes": 184,
+    "sha256": "c56552aa5f91bc6090544707cc95d9deffc9ae5d47bd191fa59af479ac06dee3",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cfg/voc.data",
+    "copy": true,
+    "bytes": 204,
+    "sha256": "9874ac6bed87e368f6077d956542b5a0a8ed6fa775dcd1d453518ff8b6777c55",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cmake/vcpkg_linux.diff",
+    "copy": true,
+    "bytes": 54,
+    "sha256": "dee54215f8d797a8e33ff634d97d4033798208df2397381f1b35f4672ce138c6",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cmake/vcpkg_linux_cuda.diff",
+    "copy": true,
+    "bytes": 65,
+    "sha256": "9310f44b8d4ca03527f0572bb739dd2815b3ab3db745ee2c0526d61e0e38af9b",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cmake/vcpkg_osx.diff",
+    "copy": true,
+    "bytes": 52,
+    "sha256": "b0d7d99cbfeb8fe6794504570cd938b4e9ab21e76252d9d8d9eb1d1336853d07",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cmake/vcpkg_windows.diff",
+    "copy": true,
+    "bytes": 56,
+    "sha256": "dae95f3c83cc3a1c8f160bcab22550963894088e305c2e7afe4aa4a23b0e9f68",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/cmake/vcpkg_windows_cuda.diff",
+    "copy": true,
+    "bytes": 67,
+    "sha256": "79c5873e10d037b25eb4827401466de053519998c5fb9021de4417d81ff90d9a",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/setup.ps1",
+    "copy": true,
+    "bytes": 891,
+    "sha256": "95b2127faf4da2980544343568bf3f50c985df66f972aeea6c288770c5707075",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/log_parser/run_log_parser_windows.cmd",
+    "copy": true,
+    "bytes": 187,
+    "sha256": "a615101123537b4782f23b9ae7bc3afbe0c3f5a8903416260c01a21149dcf408",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/windows/win_cifar.cmd",
+    "copy": true,
+    "bytes": 435,
+    "sha256": "c325dff9cfc65913872a522a5a63da988b55d87944f90a1dffa57b46c0cc36da",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/windows/win_get_imagenet_train_48hours.cmd",
+    "copy": true,
+    "bytes": 725,
+    "sha256": "b2653410298a39d5d722268ebf9d29ff0415e3b2cd708b7ab0a4533f48bf3132",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/windows/win_get_imagenet_valid.cmd",
+    "copy": true,
+    "bytes": 1052,
+    "sha256": "008e4c72d64fb6972c7ee50cbb264d81f458881c083919a2baee5b174291f513",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/windows/win_get_otb_datasets.cmd",
+    "copy": true,
+    "bytes": 559,
+    "sha256": "ca825bf5602094f1ba3d512712f8e0ed5bbd09b2ae4a6fafb25aded87e924c11",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/scripts/windows/win_install_cygwin.cmd",
+    "copy": true,
+    "bytes": 268,
+    "sha256": "bd9fd3981061c8d91f5a01ff98da314077f39cf015c9fed807e207617c9812fe",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/activation_kernels.cu",
+    "copy": true,
+    "bytes": 26019,
+    "sha256": "27cd6e4d8b40a4935327647519e7bb88554f2c0a4bae592bf26032fd7f57df45",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/avgpool_layer_kernels.cu",
+    "copy": true,
+    "bytes": 1673,
+    "sha256": "bcceb491f0d9ce44dc805c3a748eeb1bb738e8fe8c3347f177ab554d4681c55c",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/blas_kernels.cu",
+    "copy": true,
+    "bytes": 90514,
+    "sha256": "d549664879e4e99a970f44612ac7b8bd35ac69bf0d3dee72f3443960a2b5b8fd",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/col2im_kernels.cu",
+    "copy": true,
+    "bytes": 5850,
+    "sha256": "ce46953d0b1eabe84926fe134dbaf0c90696bf0a34eec7d5c959d4742977ca39",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/convolutional_kernels.cu",
+    "copy": true,
+    "bytes": 61177,
+    "sha256": "66a7ef545aa7c0ed66446155a6d51d63ff0f4ec356c649adb3696e628e5b5519",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/crop_layer_kernels.cu",
+    "copy": true,
+    "bytes": 6677,
+    "sha256": "e4570e3b50d7d0da5fb55c68b7f3e3d27ed1956efe5f1b9a5be07687c5ef648a",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/deconvolutional_kernels.cu",
+    "copy": true,
+    "bytes": 3923,
+    "sha256": "fd132344aaecc0226997bbf7edb2c9045f8eec1e21deee17d55ecad82c5c0e3c",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/dropout_layer_kernels.cu",
+    "copy": true,
+    "bytes": 11213,
+    "sha256": "b2d8e9fdde7fbb5a898216ad05cc4d98db532898c12e963dd15036eb9d723bbf",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/im2col_kernels.cu",
+    "copy": true,
+    "bytes": 86434,
+    "sha256": "8bed6b1e2b38bbfdc210439924239f0385c59223a9d305ea8e83de9f865a544d",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/maxpool_layer_kernels.cu",
+    "copy": true,
+    "bytes": 12574,
+    "sha256": "795189e58cf6f1c8ca18eeb48e80bcbd480b077a36892531a2a617efeda8e0b5",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/deepbot_yolo_detection/darknet/src/network_kernels.cu",
+    "copy": true,
+    "bytes": 25517,
+    "sha256": "de876545e5064d7d536ab950e770bafd42381a055ed9222424dd214d956361e4",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/rikibot_yolov5/rikibot_yolov5/yolov5/Dockerfile",
+    "copy": true,
+    "bytes": 2178,
+    "sha256": "f4bbd2e51e3fe220e735ad961180fc32b5038cc12e67dfd5950b09974206fee0",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/rikibot_yolov5/rikibot_yolov5/yolov5/tensorrtx/yolov5/preprocess.cu",
+    "copy": true,
+    "bytes": 3557,
+    "sha256": "d5e8224d814004d6bedfc1073dbbd8e0d721c4d5d5e1b51e5b400647281e0129",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/rikibot_yolov5/rikibot_yolov5/yolov5/tensorrtx/yolov5/yololayer.cu",
+    "copy": true,
+    "bytes": 11887,
+    "sha256": "36a903aba3cc01f0724cce60b1dc948deb58ab304773cd1c1879fa62a28cbaa3",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "deepbot_project/rikibot_yolov5/rikibot_yolov5/yolov5/utils/google_app_engine/Dockerfile",
+    "copy": true,
+    "bytes": 821,
+    "sha256": "1022017f403f421a253bb3bcd694dd6d52db0fbe6ec1018c3122a9479fec0bc8",
+    "reason": "explicit source/resource gap"
+  },
+  {
+    "relative_path": "robot_localization/doc/Makefile",
+    "copy": true,
+    "bytes": 7704,
+    "sha256": "a8aa22ca654451abb11d6bd1ce7e74c24135c917cb3d98d917c773c2b16e2bec",
+    "reason": "explicit source/resource gap"
+  }
+]

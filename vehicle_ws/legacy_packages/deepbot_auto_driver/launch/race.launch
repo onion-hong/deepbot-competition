@@ -1,0 +1,32 @@
+<launch>
+     <arg name="camera_type" value="$(env CAMERA)"/>
+     <arg if="$(eval arg('camera_type') == 'astra')" name="input_image"      default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'astrapro')" name="input_image"   default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'usb')" name="input_image"        default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'csi')" name="input_image"        default="/camera/rgb/image_raw"/>
+     <arg if="$(eval arg('camera_type') == 'intel')" name="input_image"      default="/camera/color/image_raw"/>
+
+     <include file="$(find deepbot)/launch/camera.launch"/>
+     <include file="$(find deepbot_openvino)/launch/detect.launch"/>
+     
+      <!--对于内外线调整中心距如果微调不明显，可以直接设置一个大的值，看效果，确认后在进行微调-->
+      <node name='driver_way_node' pkg="deepbot_auto_driver" type="driver_way.py" output="screen">
+        <!--内zuo线参数，中心距与PID设置，如果在摄像头角度合适情况下在内线行驶压线不居中请调试中心距，调整请以0.01增加或者减小-->
+        <param name="outer_ring_center_target" value="0.2" type="double" />        
+        <param name="outer_ring_vel_z_P" value="0.012" type="double" />
+        <!--0.005-->      
+        <param name="outer_ring_vel_z_D" value="0.005" type="double" />
+        <!--外you线参数，中心距与PID设置，如果在摄像头角度合适情况下在外线行驶压线不居中请调试中心距，调整请以0.01增加或者减小-->
+        <param name="Inner_ring_center_target" value="0.8" type="double" />
+        <param name="Inner_ring_vel_y_P" value="0.0010" type="double" />
+        <param name="Inner_ring_vel_y_D" value="0.003" type="double" />
+        <param name="Inner_ring_vel_z_P" value="0.012" type="double" />
+        <!--0.005-->
+        <param name="Inner_ring_vel_z_D" value="0.005" type="double" />
+        <!--语音开启或者关闭参数，没有语音模块请设置False-->
+        <param name="voice_on" value="True" type="bool" />     
+      </node>   
+      <node name='deepbot_auto_run' pkg="deepbot_auto_driver" type="auto_run.py" output="screen">
+	<param name="camera_topic" value="$(arg input_image)" type="string" />
+      </node> 
+</launch>
