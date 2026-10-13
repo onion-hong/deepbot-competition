@@ -1,0 +1,38 @@
+{
+  "storage_version": "deepbot.data/0.1.0",
+  "mode": "visual_only",
+  "split": "development",
+  "role": "manual_visual",
+  "acquisition_method": "stationary",
+  "snapshot_note": "A observed these mappings 2026-10-13 17:57 Asia/Shanghai; cameras/master stopped by 18:01. Recheck before use. This config does not start them.",
+  "cameras": {
+    "high": {
+      "physical_id": "vehicle_usb_port3_video_index0",
+      "device_key": "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:3:1.0-video-index0",
+      "identity_verified": false,
+      "identity_evidence": "competition/docs/VEHICLE_HANDOFF.md 2026-10-13 historical observation; A must recheck current mapping",
+      "topic": "/camera_high/image_raw/compressed",
+      "message_type": "sensor_msgs/CompressedImage",
+      "source_clock_id": "vehicle_host_ros_time",
+      "compare_source_to_ros_time": true,
+      "view_purpose": null
+    },
+    "low": {
+      "physical_id": "vehicle_usb_port2_video_index0",
+      "device_key": "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:2:1.0-video-index0",
+      "identity_verified": false,
+      "identity_evidence": "competition/docs/VEHICLE_HANDOFF.md 2026-10-13 historical observation; A must recheck current mapping",
+      "topic": "/camera_low/image_raw/compressed",
+      "message_type": "sensor_msgs/CompressedImage",
+      "source_clock_id": "vehicle_host_ros_time",
+      "compare_source_to_ros_time": true,
+      "view_purpose": null
+    }
+  },
+  "feedback": null,
+  "command": null,
+  "max_age_ns": 500000000,
+  "startup_grace_ns": 5000000000,
+  "reserve_bytes": 1073741824,
+  "pairing": {"basis": "source_header", "tolerance_ns": 50000000, "scope": "engineering_static_trial_only_not_formal_acceptance"}
+}

@@ -1,0 +1,17 @@
+{
+  "storage_version": "deepbot.data/0.1.0",
+  "mode": "visual_only",
+  "split": "development",
+  "role": "synthetic",
+  "acquisition_method": "synthetic",
+  "cameras": {
+    "high": {"physical_id": "SYNTHETIC_USB_A", "identity_verified": false, "topic": "/synthetic_b/high", "message_type": "sensor_msgs/CompressedImage", "source_clock_id": "synthetic_source_clock"},
+    "low": {"physical_id": "SYNTHETIC_USB_B", "identity_verified": false, "topic": "/synthetic_b/low", "message_type": "sensor_msgs/CompressedImage", "source_clock_id": "synthetic_source_clock"}
+  },
+  "feedback": null,
+  "command": null,
+  "max_age_ns": 500000000,
+  "startup_grace_ns": 5000000000,
+  "reserve_bytes": 104857600,
+  "pairing": {"basis": "source_header", "tolerance_ns": 50000000, "scope": "synthetic_only"}
+}

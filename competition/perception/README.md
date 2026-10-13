@@ -1,5 +1,7 @@
-# perception
+# C 离线道路感知与回放
 
-所有者：C。从 reference/original/auto_driver 和 openvino、reference/patched/factory_auto_run.py 审查复用；先输出离线 road/detections。
+已实现 NumPy/Pillow 黑线白路像素路径估计、目录/公共 camera_frame 清单回放、叠加图和审计输出。无 ROS、相机采集、速度消息或训练入口。
 
-本轮仅目录与职责，不是已实现模块。测试放 competition/tests/perception/，说明放本目录；公共接口修改交 A。
+交付与复现见 [HANDOFF.md](HANDOFF.md)。最终证据为 `evidence/20261013_synthetic_04/` 与 `evidence/20261013_manifest_01/`；01—03 为保留的开发迭代，不是最终验收结果。
+
+`road.valid` 仅表示单帧像素路径满足声明的估计条件；净空、任务许可、反馈与行车由 A 独立判断。窄阴影误识别和视野限制见交接。本模块不是完整比赛感知系统。

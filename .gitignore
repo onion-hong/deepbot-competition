@@ -29,3 +29,12 @@
 **/id_ed25519*
 **/authorized_keys
 **/known_hosts
+
+# Offline module outputs: retain local evidence, never stage generated datasets.
+/competition/data_tools/outputs/
+/competition/tests/data_tools/outputs/
+/competition/data_tools/evidence/
+/competition/perception/evidence/
+/competition/mission/artifacts/
+# Historical machine-local provenance remains unchanged beside its module.
+/competition/mission/PROVENANCE.json

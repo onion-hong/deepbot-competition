@@ -1,0 +1,4 @@
+# No OpenCV, ROS, model weights, training stack or global installation required.
+# Tested locally: numpy==2.3.5, Pillow==12.3.0 in bundled Python.
+numpy>=1.23,<3
+Pillow>=9,<13

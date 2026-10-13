@@ -1,0 +1,137 @@
+{
+  "scope": "32 module delivery files plus 1 versioned integration entry; raw workspace bytes before Git text normalization",
+  "files": {
+    "competition/data_tools/__init__.py": {
+      "sha256": "a5222416e24b8b67a690247e45f323b0415b6f8ffccfcfcd715e58bb75452e8a",
+      "bytes": 125
+    },
+    "competition/data_tools/__main__.py": {
+      "sha256": "eedaef21c95ee5d20fde14d63e39fde3ea763c899b4852296e0a361e5e969b68",
+      "bytes": 4166
+    },
+    "competition/data_tools/adapter.py": {
+      "sha256": "84476b9f4a1318e5f8fdf92b40baaa7f401fc00588d36771e5a354e3c65596e0",
+      "bytes": 1102
+    },
+    "competition/data_tools/callback_gate.py": {
+      "sha256": "44bf1eccd6faa2ee079ffb219bec08151c99e6dda4c3eeb80e6036397cac8f3a",
+      "bytes": 931
+    },
+    "competition/data_tools/core.py": {
+      "sha256": "196bbe3b5417d71bc1ad97786823cc369c88ab1a9af338506c8739a9c01887f2",
+      "bytes": 19803
+    },
+    "competition/data_tools/offline.py": {
+      "sha256": "683e172e8b46221210b297c644924a992e84747842e35771dfd12b89c1b1be5b",
+      "bytes": 21107
+    },
+    "competition/data_tools/ros_capture.py": {
+      "sha256": "b2874700ea4853fb87ae40922112a86a0a2acc0cbac3f7803933b9ad41d0c3f4",
+      "bytes": 7716
+    },
+    "competition/data_tools/synthetic.py": {
+      "sha256": "4906f36ba3ebeb06a55bbe94a2e00903cfb885d6c268031f871e4fedc5834b3b",
+      "bytes": 2530
+    },
+    "competition/data_tools/requirements.txt": {
+      "sha256": "d23a8bc629d975d3bed4d043fe6952b321a134730ffba3db04bf3a6740687563",
+      "bytes": 184
+    },
+    "competition/data_tools/README.md": {
+      "sha256": "5eff4810b9652296fad3fd62f11b58eae1679ea1b1bbd19722599eedea9688d6",
+      "bytes": 1427
+    },
+    "competition/data_tools/HANDOFF.md": {
+      "sha256": "19849684a5be5e6fecb686353095e46c06699e2da9d0426fdf3f75598d140adc",
+      "bytes": 13815
+    },
+    "competition/data_tools/SCHEMA.md": {
+      "sha256": "d4720e65f6451d108862e7c1c2dcff9fdbe85dbf550042d257a5026fe10a01b8",
+      "bytes": 8882
+    },
+    "competition/data_tools/synthetic.example.json": {
+      "sha256": "f3c7aabeb976218f28f13b8cf441e8590e83158886c0b3828c52682312dae093",
+      "bytes": 794
+    },
+    "competition/data_tools/vehicle.visual.example.json": {
+      "sha256": "5513be0846da642da1cc388c07f58c40255b151c0a73668030293c0c06a2d5c4",
+      "bytes": 1703
+    },
+    "competition/perception/__init__.py": {
+      "sha256": "15110c882879a95cef464c5b62e563e274afe874226eca9e3d91be19a91777fb",
+      "bytes": 83
+    },
+    "competition/perception/replay.py": {
+      "sha256": "d467e12ff4fba5ca5158c9ccdc104c964fdd549c0e365a782c5e286296f57774",
+      "bytes": 12438
+    },
+    "competition/perception/road.py": {
+      "sha256": "784d4f5d6400f2afa34df35719708bd5d18d98308dd4845324ddd5d1105b0439",
+      "bytes": 6046
+    },
+    "competition/perception/synthetic.py": {
+      "sha256": "6bc017d45c8bb368b0fd8799dc96f0c446d79eee22976e7fc1bf1f89f300adb4",
+      "bytes": 3352
+    },
+    "competition/perception/requirements.txt": {
+      "sha256": "bdd15243dc78b5655ae0b408b816eecae7de015aab62dfa1000313b90100ddb1",
+      "bytes": 176
+    },
+    "competition/perception/README.md": {
+      "sha256": "eea69a9bf909603d8b2a5ab067025bfd46af778e32606debf363a4b0651a4eb7",
+      "bytes": 632
+    },
+    "competition/perception/HANDOFF.md": {
+      "sha256": "3557047adecfe2c5c2f33ccef6db6ff594470360d70255077b5a63bc0065a831",
+      "bytes": 11354
+    },
+    "competition/mission/__init__.py": {
+      "sha256": "830e7e079332e80322b1c3b8ed068c61e6124de7d9ccc137a7a6735aa05da933",
+      "bytes": 112
+    },
+    "competition/mission/core.py": {
+      "sha256": "01b1e9f1cddec04d7a5c14b581a366afc3754dfc35f6cde2aee4f6c489fd76bf",
+      "bytes": 25916
+    },
+    "competition/mission/replay.py": {
+      "sha256": "61907197a885205997301903cceef2d4868ddd1089938f8c35bec71c3eed0916",
+      "bytes": 4455
+    },
+    "competition/mission/synthetic.py": {
+      "sha256": "d9019fa4739fd24582fe038962a53f3078e36fe1849f6cd81f8c3ab01a279477",
+      "bytes": 5102
+    },
+    "competition/mission/README.md": {
+      "sha256": "059771e3247b206a36c1a0378edd62f3ff2a2850e046edb9b3b1422b4f6ed99d",
+      "bytes": 1504
+    },
+    "competition/mission/HANDOFF.md": {
+      "sha256": "40a1657b4f9ad8dedee8b6ea2d69def75d03f907e46c68d7753161502cd0a6cc",
+      "bytes": 9501
+    },
+    "competition/mission/EVENT_PROTOCOL.md": {
+      "sha256": "1a2fe8028b664a83f89b5994a6e24e004d1b94f5c45772bf90f931805cf19c95",
+      "bytes": 8511
+    },
+    "competition/tests/data_tools/run_checks.py": {
+      "sha256": "3b345faf111a2bfe9be568386d2c5f5ed13329590d00d05c22292ee1160900b9",
+      "bytes": 1645
+    },
+    "competition/tests/data_tools/test_data_tools.py": {
+      "sha256": "4bd45c2e9e547eb4eb9c17ec151abe940d716b5c171ea620adef6e4a2c721a62",
+      "bytes": 19810
+    },
+    "competition/tests/perception/test_perception.py": {
+      "sha256": "88efd3917000029b3ee0519d5e4f2114bba3f5709db2b2bc3ef44d913dfe0eff",
+      "bytes": 9488
+    },
+    "competition/tests/mission/test_mission.py": {
+      "sha256": "5a9866cb08dbb6d58f2e88a224d73ea00725cb2ebab6a0f95764dbc865f5a99c",
+      "bytes": 18069
+    },
+    "competition/tests/offline/verify_data_perception.py": {
+      "sha256": "62fb87c85448ce8dfd30b35f3462c13c5b7b18bdea5bfcf72dcafd216e162a25",
+      "bytes": 3155
+    }
+  }
+}
