@@ -1,5 +1,7 @@
 # DEEPBOT 本地工程基线
 
+> 以下保留 2026-10-13 最初基线阶段的说明，其中“尚未实现/确认”描述当时状态。当前已交付 B/C/D 离线模块及现场接口快照，请先读仓库根 [README](../README.md) 和 [阶段集成收据](docs/OFFLINE_STAGE_RECEIPT.md)。
+
 接口 `deepbot.offline/0.1.0`，工程标识 `deepbot-local-20261013-v1`。这是可独立运行接口回归的本地准备基线；不是可部署的完整 catkin 工作区，也不是比赛算法或整车验收结果。
 
 历史源码显示 ROS 1（roscpp/rospy）；历史设备记录为 Ubuntu 20.04 / ROS Noetic。当前车载发行版、包版本、消息 MD5 和部署文件尚未重新确认。没有建立 ROS 2 包，没有编造 `.msg` 或已部署话题。
