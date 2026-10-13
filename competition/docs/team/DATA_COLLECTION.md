@@ -1,12 +1,13 @@
 # 双相机数据：采集、回读、共享
 
-更新：2026-10-13。配合[团队路线](TEAM_GUIDE.md)使用。这里提供现有 CLI 的操作流程；**真实 ROS 采集入口仍待现场验收**，当前不据此恢复车辆运动。设备接入和部署统一由甲/A 负责，乙管数据，丙接离线回放。
+更新：2026-10-13。下一次现场执行[新版步骤与分工](NEXT_SESSION_PLAN.md)：直接采有用的手柄路段，随采随查。**不再要求先独立静止20秒。** 本页保留通用数据规范与静态命令参考，真实ROS入口验证融入首段采集；设备接入统一由甲/A负责，乙管数据，丙接离线回放。
 
 ## 先区分这次采的是什么
 
 | 用途 | 配置 | 允许怎样解释 |
 |---|---|---|
 | 静态取景/手推视觉 | `mode=visual_only`，`role=manual_visual`，method 为 `stationary` 或 `hand_push` | 反馈可以空；只用于视觉和诊断，不能冒充驾驶动作标签。手推仍需以后有移动采集条件 |
+| 手柄驾驶的视觉采集（本轮） | `mode=visual_only`，`role=manual_visual`，method 为 `joystick` | 现有校验支持；命令/反馈可空，只做视觉数据，不冒充示范动作标签 |
 | 手柄示范 | `mode=demonstration`，`role=manual_demonstration`，method 为 `joystick` | 必须有有效反馈；反馈不等于手柄命令或人的意图。当前先不进行 |
 | 自主验证 | `role=autonomous_evaluation`，method 为 `autonomous` | 单独保留完整自主过程、失败和接管；不能当手柄示范，本工具不判自主成功 |
 | 合成软件检查 | `role=synthetic`，method 为 `synthetic` | 仅工程测试，不是现场训练或比赛证据 |
@@ -38,7 +39,9 @@
 
 原始格式、事件和标签细节见 [SCHEMA.md](../../data_tools/SCHEMA.md)。synthetic 配置内的测试话题完全是虚构的，不能替代真实映射。
 
-## 下一次静止 20 秒：四步卡
+## 可选静态采集：四步参考（不是本轮前置关卡）
+
+下方 `--seconds 20` 与 `stationary/static` 仅适用于这份静态参考。手柄移动采集使用[B操作卡](../next_session/B_CAPTURE.md)，显式设置录制上限，路段完成后先停车再结束记录；回放用 `visual_sequence`。不能把两套参数混用。
 
 **执行者：甲/A；环境：车载 Bash，已加载正确 ROS 1 环境，车辆保持静止，两路相机已由现场负责人确认运行。** 本卡不启动 master、相机、串口或底盘。若设备不在线，停止在准备阶段，不能擅自追加重启或运动操作。
 
@@ -107,7 +110,7 @@ python3 -B -m competition.data_tools inspect --export "$EXPORT_PATH" --report "$
 
 ## 交给丙回放，并决定下一批拍什么
 
-静态导出通过后，在本地仓库根目录用安装了 NumPy/Pillow 的解释器执行：
+仅对静态导出，在本地仓库根目录用安装了 NumPy/Pillow 的解释器执行下面的static命令。手柄移动数据按[C操作卡](../next_session/C_REPLAY.md)使用visual_sequence：
 
 ```bash
 REPLAY_ID="replay_$(python3 -c 'import uuid; print(uuid.uuid4().hex[:8])')"

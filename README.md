@@ -12,7 +12,9 @@
 
 ## 队友从这里开始
 
-先阅读 [三人协作与推进顺序](competition/docs/team/TEAM_GUIDE.md) 和 [现场采集操作步骤](competition/docs/team/DATA_COLLECTION.md)。下面的命令用于电脑上的离线验证；车载 ROS 源码与构建范围见 [vehicle_ws](vehicle_ws/README.md)。
+**下一次现场从[详细执行步骤与分工](competition/docs/team/NEXT_SESSION_PLAN.md)开始：手柄采集有用路段，停车后当场回放；不单设静止20秒关卡。** 决策复核与多对话约定见 [AGENTS.md](AGENTS.md)。
+
+通用背景见 [三人协作与推进顺序](competition/docs/team/TEAM_GUIDE.md) 和 [数据采集规范](competition/docs/team/DATA_COLLECTION.md)。下面的命令用于电脑上的离线验证；车载 ROS 源码与构建范围见 [vehicle_ws](vehicle_ws/README.md)。
 
 ```bash
 git clone https://github.com/onion-hong/deepbot-competition.git
