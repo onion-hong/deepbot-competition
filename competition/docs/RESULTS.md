@@ -1,5 +1,7 @@
 # 本地准备交付结果（2026-10-13）
 
+**后续状态更新（现场只读阶段）：** 原51项与 `tmp/baseline_receipt.json` 全部一致后，通过工具受控提权完成精确暂存与本地提交，真实基线为 **`cd3d33415bbe4b753c1340a333ac6bc51e0c3927`**。索引逐文件核对通过（仅Git规定的文本换行归一化），未混入B/C/D新增文件、未推送/切分支。下面“无提交/Permission denied”保留为上一阶段的真实历史。最新现场交接见 `VEHICLE_HANDOFF.md`，独占开发规则见 `OWNERSHIP.md`。
+
 工程标识：`deepbot-local-20261013-v1`。接口冻结：`deepbot.offline/0.1.0`。
 
 Git 起始状态已核实为 master 无提交、索引空；`git remote -v` 无输出。按51项清单实际执行 `git add --pathspec-from-file=competition/docs/BASELINE_FILES.txt`，退出1，报 `.git/index.lock: Permission denied`。因此**尚无基线提交号，未暂存、未执行commit、未推送**。这是文件系统拒绝写.git，不是提交成功，也不是分支冲突。未解除权限、未改用别的仓库绕过。最终复核：`git status`仍报告No commits yet on master，`git ls-files --stage`为空，`git rev-parse --verify HEAD`失败。
