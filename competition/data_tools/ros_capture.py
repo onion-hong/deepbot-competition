@@ -100,8 +100,10 @@ def capture(root, session_id, config, seconds):
         next_status = 0
         while True:
             writer.drain_requests()
+            # Sample frame age under the writer lock: callbacks may update the
+            # latest receipt while this loop is waiting to acquire that lock.
+            status = writer.status()
             now = time.monotonic_ns()
-            status = writer.status(now)
             ready_once = ready_once or status['ready']
             if now >= next_status:
                 print(dumps(status), flush=True)
