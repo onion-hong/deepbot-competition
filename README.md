@@ -8,11 +8,11 @@
 
 车载 ROS 源码现已整理入库：7 个默认包（6 个代码包＋1 个资源包），16 个隔离历史包。干净 Git 副本复验与交付范围见 [仓库交付记录](competition/docs/REPOSITORY_DELIVERY.md)。
 
-**当前不是可以直接启动实车完成比赛的程序。** 真实双相机记录尚待验收；目标识别、真实任务事件、绕桶/环岛/倒库的运动执行仍需开发。离线任务模块目前输出停车请求。
+**当前不是可以直接启动实车完成比赛的程序。** 2026-10-14已正常取得约11分58秒、4.65GB的全程手柄双相机rosbag，完整本地备份在进度说明发布时仍进行中。高低位各5张真实抽样都能读取，但当前巡线有效路径为0/10，需针对实际视野改进。目标识别、真实任务事件、运动闭环仍需开发；离线任务模块目前输出停车请求。
 
 ## 队友从这里开始
 
-**下一次现场从[详细执行步骤与分工](competition/docs/team/NEXT_SESSION_PLAN.md)开始：手柄采集有用路段，停车后当场回放；不单设静止20秒关卡。** 决策复核与多对话约定见 [AGENTS.md](AGENTS.md)。
+**先读[10月14日进度与三人开工任务](competition/docs/team/TEAM_START_20261014.md)：队长负责视觉，另两位分别做FSM决策和运动控制/集成，可用模拟输入并行开发。** 旧现场计划见[详细步骤](competition/docs/team/NEXT_SESSION_PLAN.md)，其中尚未采集的状态属于历史。决策复核与多对话约定见 [AGENTS.md](AGENTS.md)。
 
 通用背景见 [三人协作与推进顺序](competition/docs/team/TEAM_GUIDE.md) 和 [数据采集规范](competition/docs/team/DATA_COLLECTION.md)。下面的命令用于电脑上的离线验证；车载 ROS 源码与构建范围见 [vehicle_ws](vehicle_ws/README.md)。
 
@@ -33,7 +33,7 @@ python -B -m unittest discover -s competition/tests/mission -p "test_*.py" -v
 python -B competition/tests/offline/verify_data_perception.py --output competition/tests/offline/outputs/my_first_run
 ```
 
-已验证的本地环境为 Python 3.12、NumPy、Pillow；车载 Python 3.8/ROS Noetic 的真实接入仍待验证。最后一条命令输出目录必须是新目录，重复执行请换名称。生成图像与日志保留在本地，不提交 Git。
+已验证的本地环境为 Python 3.12、NumPy、Pillow；车载 Python 3.8/ROS Noetic 已完成双图像rosbag采集，完整新控制程序尚未实车接入。自研逐帧记录器出现吞吐积压，本次采用标准rosbag保存原始消息。最后一条命令输出目录必须是新目录，重复执行请换名称。生成图像与日志保留在本地，不提交 Git。
 
 ## 目录与交接
 
